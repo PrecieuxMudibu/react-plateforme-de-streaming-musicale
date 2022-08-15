@@ -1,0 +1,46 @@
+.page {
+    display:flex;
+    color:white;
+}
+
+.left-section {
+    border: 1px solid black;
+    background-color: #144D65;
+    width: 21%;
+}
+.page__logo-group {
+    font-size: 2.9rem;
+    font-weight: bold;
+    border: 1px solid white;
+
+}
+
+.page__logo-img {
+    width: 6.7rem;
+    /* height: 6.7rem; */
+    display:inline;
+    border: 1px solid black;
+}
+
+.page__logo-text {
+    display: inline-block;
+    border: 1px solid black;
+    position: relative;
+    bottom: 2rem;
+
+}
+
+/* .page__navigation {
+    text-decoration: none;
+} */
+
+.page__link {
+    text-decoration: none;
+    
+}
+
+.right-section {
+    border: 1px solid black;
+    background-color: #144D65;
+    width: 79%;
+}
