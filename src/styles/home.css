@@ -1,0 +1,50 @@
+.home {
+    display: flex;
+    background:#F3F3F3;
+    height: 100vh;
+}
+
+.home__left-section {
+    border:1px solid black;
+    width:50%;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    background: #144D65;
+    background-image: url("../images/woman-dance.png");
+    background-repeat: no-repeat;
+    clip-path: inset(0 round 0 17.4rem 17.4rem 0 );
+}
+.home__right-section {
+    border:1px solid black;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    color: #4B4B4B;
+}
+
+.home__logo {
+width: 13.7rem;
+}
+
+.home__second-title {
+    font-size: 3rem;
+
+}
+
+.home__button {
+    margin:2rem;
+    font-size: 2rem;
+    padding:1rem 2rem;
+    background: #053B52;
+    color:white;
+    font-weight: 600;
+    border-radius:.5rem;
+    text-decoration: none;
+}
+.home__text {
+    text-align: center;
+    font-size: 2rem;
+}
