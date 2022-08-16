@@ -12,7 +12,7 @@
     font-size: 2.9rem;
     font-weight: bold;
     border: 1px solid white;
-
+    margin-top: 2rem;
 }
 
 .page__logo-img {
@@ -36,11 +36,101 @@
 
 .page__link {
     text-decoration: none;
-    
+    display: block;
+    color: white;
+    font-size: 1.9rem;
+    font-weight: bold;
+    /* border: 1px solid black; */
+    margin:1rem;
+    padding: 1rem;
+    border-radius: .6rem;
+    background: #053B52;
+}
+
+.icon {
+    margin-right: 2rem;
 }
 
 .right-section {
-    border: 1px solid black;
-    background-color: #144D65;
+    /* border: 1px solid black; */
+    background-color: #053B52;
     width: 79%;
+    padding-left: 3rem;
 }
+
+.page__input {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 1.9rem;
+    /* border: 1px solid white; */
+    outline: none;
+    font-weight: bold;
+    position: relative;
+    bottom: .4rem;
+    left: 1.5rem;
+}
+
+.page__search {
+    display: inline-block;
+    /* border: 1px solid black; */
+    margin-top: 2rem;
+    padding-bottom: 1.1rem;
+    border-bottom: 1px solid white;
+    width: 45%;
+
+}
+
+.page__search-icon {
+    font-size: 2.4rem;
+}
+
+.page__input::placeholder {
+    color:white;
+}
+
+.page__first-title {
+    font-size: 2.9rem;
+}
+.card {
+    background-color: #144D65;
+    display: inline-block;
+    padding:2rem;
+    margin: 0  1.5rem 1.5rem 0;
+    /* border: 1px solid black; */
+
+}
+.card__image {
+    width: 19.1rem;
+    /* height: 19.1rem; */
+    border-radius: 1.4rem;
+}
+
+.card__title {
+    font-size: 2.1rem;
+    font-weight: 450;
+}
+
+.card__text {
+    margin-top: .3rem;
+    font-size: 1.5rem;
+    color:#DBDBDB;
+    font-weight: 450;
+
+}
+
+.page__list {
+    font-size: 1.9rem;
+}
+.page__list td {
+    /* border: 1px solid white; */
+    padding: 1rem  10rem 1rem 1rem;
+    /* padding: 1rem  1rem 1rem 10rem; */
+}
+
+.page__list-head {
+    font-weight: bold;
+}
+
+
+
