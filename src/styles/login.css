@@ -1,10 +1,10 @@
-.home {
+.login {
     display: flex;
     background:#F3F3F3;
     height: 100vh;
 }
 
-.home__left-section {
+.login__left-section {
     /* border:1px solid black; */
     width:50%;
     display: flex;
@@ -17,14 +17,14 @@
     clip-path: inset(0 round 0 10rem 10rem 0 );
 }
 
-.home__first-title {
+.login__first-title {
     margin-top: 10rem;
     font-size: 6.5rem;
     font-weight: bold;
     color: white;
     text-align: center;
 }
-.home__right-section {
+.login__right-section {
     /* border:1px solid black; */
     width:50%;
     display: flex;
@@ -34,16 +34,16 @@
     color: #4B4B4B;
 }
 
-.home__logo {
+.login__logo {
 width: 13.7rem;
 }
 
-.home__second-title {
+.login__second-title {
     font-size: 2.5rem;
 
 }
 
-.home__button {
+.login__button {
     margin:2rem;
     font-size: 2rem;
     padding:1rem 2rem;
@@ -53,7 +53,7 @@ width: 13.7rem;
     border-radius:.5rem;
     text-decoration: none;
 }
-.home__text {
+.login__text {
     text-align: center;
     font-size: 1.9rem;
 }

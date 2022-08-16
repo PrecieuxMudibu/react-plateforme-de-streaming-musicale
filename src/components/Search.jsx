@@ -1,6 +1,8 @@
 import React from "react"
 import LeftSection from "./LeftSection"
-import RightSection from "./RightSection"
+import ListOfCards from "./ListOfCards"
+import ListOfSongs from "./ListOfSongs"
+import Header from "./Header"
 import AudioBar from "./AudioBar"
 
 import "../styles/search.css"
@@ -11,7 +13,11 @@ function Search () {
         <>
             <div className="page">
                 <LeftSection />
-                <RightSection />
+                <div className="right-section">
+                    <Header />
+                    <ListOfCards text="Populaire"/>
+                    <ListOfSongs text="Chansons" />
+                </div>     
             </div>
             <AudioBar />       
         </>
