@@ -1,0 +1,13 @@
+.page__audio {
+    background-color: #053B52;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+}
+
+/* audio {
+    width: 100%;
+
+} */
+
+
