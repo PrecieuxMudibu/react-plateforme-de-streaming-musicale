@@ -18,8 +18,6 @@ function Home () {
                 <p className="home__text">Si vous n’avez pas de compte, veuillez vous inscrire ici</p>
             </div>
         </div>
-
-
     )
 }
 
