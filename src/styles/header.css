@@ -11,6 +11,20 @@
     font-size: 2.4rem;
 }
 
+.page__profile-picture {
+    width:4rem;
+    height:4rem;
+    border-radius: 100%;
+    position: relative;
+    top:1.3rem;
+    margin-right: .3rem;   
+}
+
+.page__profile-text {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 .page__input {
     border: none;
     background-color: transparent;
@@ -21,4 +35,8 @@
     position: relative;
     bottom: .4rem;
     left: 1.5rem;
+}
+
+.page__input::placeholder {
+    color:white;
 }
