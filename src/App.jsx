@@ -6,7 +6,7 @@ import Search from './components/Search'
 import LikedSongs from './components/LikedSongs'
 import Playlists from './components/Playlists'
 function App() {
-
+    
     return (
         <>
         <Routes>
