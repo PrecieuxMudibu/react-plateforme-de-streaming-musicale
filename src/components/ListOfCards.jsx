@@ -36,20 +36,15 @@ function ListOfCards({ text }) {
     return (
         <section>
             <h1 className="page__first-title">{text}</h1>
-            {console.log(recentlyPlayed)}
-            {recentlyPlayed.map((item) =>(
-            <div id={item.track.id} className="card">
-                <img className="card__image" src={item.track.album.images[0].url} alt="" />
-                <h2 className="card__title">{item.track.name}</h2>
-                <p className="card__text">{item.track.artists[0].name}</p>
-            </div>
+
+            {recentlyPlayed.map((item) => (
+                <Card
+                    identifiant={item.track.id}
+                    image={item.track.album.images[0].url}
+                    name={item.track.name}
+                    title={item.track.artists[0].name}
+                />
             ))}
-            {/* <Card
-                identifiant={identifiant}
-                image={imageSong}
-                name={nameArtist}
-                title={titleSong}
-            /> */}
         </section>
     )
 }
