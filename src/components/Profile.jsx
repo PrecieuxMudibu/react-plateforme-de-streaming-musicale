@@ -1,4 +1,3 @@
-import ironMan from "../images/iron-man.jpg"
 import {MdArrowDropDown} from "react-icons/md"
 import {useState, useEffect, useContext} from 'react'
 import {applicationContext} from '../App'
@@ -11,6 +10,7 @@ function Profile () {
     
     const onTheSpotifyCount = new SpotifyWebApi();
     onTheSpotifyCount.setAccessToken(token);
+
     useEffect(()=> {     
         onTheSpotifyCount.getMe (
             function (err, data) {

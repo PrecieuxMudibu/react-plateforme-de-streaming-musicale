@@ -8,7 +8,6 @@ import { applicationContext } from '../App'
 
 
 function Home () {
-    // const [token, setToken] = useState("")
     const {token, setToken} = useContext(applicationContext)
 
     useEffect(() => {
@@ -93,7 +92,7 @@ function Home () {
                     <div className="right-section">
                         <Header />
                         <ListOfCards text="Ecoutées récemment"/>
-                        <ListOfCards text="Pour commencer" />
+                        {/* <ListOfCards text="Pour commencer" /> */}
                     </div>
             </div>
         )
