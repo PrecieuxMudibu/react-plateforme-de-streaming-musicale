@@ -83,13 +83,14 @@ function Home() {
     onTheSpotifyCount.setAccessToken(token)
 
     const [recentlyPlayed, setRecentlyPlayed] = useState([])
+    // const [followedArtists, setFollowedArtists] = useState([])
 
     useEffect(() => {
         onTheSpotifyCount.getMyRecentlyPlayedTracks(function (err, data) {
             if (err) console.error("Erreur", err)
             else {
-                console.log("Récemment Jouées", data)
-                console.log("Nombre", data.items)
+                // console.log("Récemment Jouées", data)
+                // console.log("Nombre", data.items)
                 setRecentlyPlayed(data.items)
             }
         })
@@ -107,8 +108,8 @@ function Home() {
                         <Card
                             identifiant={item.track.id}
                             image={item.track.album.images[0].url}
-                            name={item.track.name}
-                            title={item.track.artists[0].name}
+                            bigTitle={item.track.name}
+                            name={item.track.artists[0].name}
                         />
                     ))}
                 </section>
