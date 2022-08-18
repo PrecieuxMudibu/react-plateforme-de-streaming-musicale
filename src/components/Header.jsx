@@ -3,10 +3,11 @@ import {BsSearch} from 'react-icons/bs'
 import "../styles/header.css"
 import { useContext } from 'react'
 import { applicationContext } from '../App'
+import SpotifyWebApi from "spotify-web-api-js";
+
 
 function Header () {
-    const {inputValue, updateInputValue} = useContext(applicationContext)
-    
+    const {inputValue, updateInputValue} = useContext(applicationContext)    
 
     return (
         <header>

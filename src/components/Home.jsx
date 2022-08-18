@@ -3,13 +3,14 @@ import SpotifyWebApi from "spotify-web-api-js";
 import Header from "./Header"
 import LeftSection from "./LeftSection"
 import ListOfCards from "./ListOfCards"
+import { applicationContext } from '../App'
 
-const TokenContext = React.createContext();
 
 
 function Home () {
-    const [token, setToken] = useState("")
-    
+    // const [token, setToken] = useState("")
+    const {token, setToken} = useContext(applicationContext)
+
     useEffect(() => {
         const hash = window.location.hash
         let token = window.localStorage.getItem("token")
@@ -50,8 +51,8 @@ function Home () {
 
 
     
-    // let onTheSpotifyCount = new SpotifyWebApi();
-    // onTheSpotifyCount.setAccessToken(token);
+    const onTheSpotifyCount = new SpotifyWebApi();
+    onTheSpotifyCount.setAccessToken(token);
     
     // onTheSpotifyCount.getMyRecentlyPlayedTracks (
     //     function  (err, data)  { 
@@ -71,6 +72,7 @@ function Home () {
 
 
 
+
     // let rechercher = "aaa"
     //     if (rechercher=="") {
     //         return (<h1>Rehcercher</h1>)
@@ -79,12 +81,15 @@ function Home () {
 
     //     }
 
+
+    // useEffect(()=>{
+    //     onTheSpotifyCount
+    // })
+
         return (
 
             <div className="page">
-                <TokenContext.Provider value={token}>
                     <LeftSection />
-                </TokenContext.Provider>
                     <div className="right-section">
                         <Header />
                         <ListOfCards text="Ecoutées récemment"/>
