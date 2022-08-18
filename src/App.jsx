@@ -13,11 +13,14 @@ const applicationContext = createContext()
 function App() {
     const [inputValue, updateInputValue] = useState("")
     const [token, setToken] = useState("")
+    const [userId, setUserId]  = useState("")
+    const [name, setName] = useState("")
+
 
     return (
         <>
             <applicationContext.Provider
-                value={{ inputValue, updateInputValue, token, setToken }}
+                value={{ inputValue, updateInputValue, token, setToken, userId, setUserId, name, setName }}
             >
                 <Routes>
                     <Route path="/" element={<Login />} />
