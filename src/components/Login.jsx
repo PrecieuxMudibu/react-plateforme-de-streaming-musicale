@@ -15,7 +15,7 @@ function Login () {
             <div className="login__right-section">
                 <img className="login__logo" src={logo2} alt='logo de Musiker' />
                 <h2 className="login__second-title">Connectez-vous !</h2>
-                <a className="login__button" href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>CONTINUEZ AVEC SPOTIFY</a>
+                <a className="login__button" href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=user-modify-playback-state user-read-playback-state user-read-currently-playing user-follow-modify user-follow-read user-read-recently-played user-read-playback-position user-top-read playlist-read-collaborative playlist-modify-public playlist-read-private playlist-modify-private app-remote-control streaming user-read-email user-read-private user-library-modify user-library-read`}>CONTINUEZ AVEC SPOTIFY</a>
                 <p className="login__text">Si vous n’avez pas de compte, veuillez vous inscrire ici</p>
             </div>
         </div>

@@ -1,12 +1,11 @@
-import ironMan from "../images/iron-man.jpg"
 import "../styles/card.css"
 
-function Card () {
+function Card({ identifiant, image, title, name }) {
     return (
-        <div className="card">
-            <img className="card__image" src={ironMan} alt="" />
-            <h2 className="card__title">Weekly Motivation</h2>
-            <p className="card__text">Ben Ina Scott</p>
+        <div id={identifiant} className="card">
+            <img className="card__image" src={image} alt="" />
+            <h2 className="card__title">{title}</h2>
+            <p className="card__text">{name}</p>
         </div>
     )
 }
