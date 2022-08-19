@@ -6,8 +6,9 @@ import Search from "./components/Search"
 import LikedSongs from "./components/LikedSongs"
 import Playlists from "./components/Playlists"
 import React, { createContext } from "react"
-import LearnPlaylist from "./components/LearnPlaylist"
 import { useState } from "react"
+import PlaylistSelected from "./components/PlayListSelected"
+import LeftSection from "./components/LeftSection"
 
 const applicationContext = createContext()
 
@@ -23,13 +24,13 @@ function App() {
             <applicationContext.Provider
                 value={{ inputValue, updateInputValue, token, setToken, userId, setUserId, name, setName }}
             >
+                
                 <Routes>
                     <Route path="/" element={<Login />} />
                     <Route path="/accueil" element={<Home />} />
                     <Route path="/rechercher" element={<Search />} />
-                    <Route path="/playlists" element={<Playlists />}>
-                        <Route path="/playlists/ecouter-une-playlist" element={<LearnPlaylist />} />
-                    </Route>
+                    <Route path="/playlists" element={<Playlists />} />
+                    <Route path="/ecouter-une-playlist" element={<PlaylistSelected />} />
 
                     <Route path="/chansons-aimées" element={<LikedSongs />} />
                 </Routes>
