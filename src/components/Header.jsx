@@ -4,6 +4,7 @@ import "../styles/header.css"
 import { useContext } from "react"
 import { applicationContext } from "../App"
 import SpotifyWebApi from "spotify-web-api-js"
+import { Link } from "react-router-dom"
 
 function Header() {
     const { inputValue, updateInputValue } = useContext(applicationContext)
@@ -14,14 +15,15 @@ function Header() {
                 <span className="page__search-icon">
                     <BsSearch />
                 </span>
-                <input
-                    onChange={(e) => updateInputValue(e.target.value)}
-                    className="page__input"
-                    type="text"
-                    placeholder="Que voulez-vous écouter"
-                />
+                <Link to="/rechercher">
+                    <input
+                        onChange={(e) => updateInputValue(e.target.value)}
+                        className="page__input"
+                        type="text"
+                        placeholder="Que voulez-vous écouter"
+                    />
+                </Link>
             </label>
-            {console.log(inputValue)}
             <Profile />
         </header>
     )

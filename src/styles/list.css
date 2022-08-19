@@ -1,13 +1,36 @@
-.page__list {
+/* .page__list {
     font-size: 1.9rem;
 }
 
 .page__list td {
-    /* border: 1px solid white; */
     padding: 1rem  10rem 1rem 1rem;
-    /* padding: 1rem  1rem 1rem 10rem; */
 }
 
 .page__list-head {
     font-weight: bold;
+} */
+
+.font-size-19 {
+    font-size: 1.9rem;
+}
+
+.page__list-head {
+    font-weight: bold;
+    display: flex;
+    padding: 1rem 0;
+
+}
+
+.page__list-children {
+    display: flex;
+    padding: 1rem 0;
+
+}
+
+.page__list-first-column {
+    width: 5%;
+}
+
+.page__list-three-last-columns {
+    width:30%
 }
