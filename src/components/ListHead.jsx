@@ -1,3 +1,6 @@
+import "../styles/list.css"
+
+
 function ListHead() {
     return (
         <div className="page__list-head font-size-19">

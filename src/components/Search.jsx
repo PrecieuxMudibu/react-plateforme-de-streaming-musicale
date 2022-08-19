@@ -49,7 +49,7 @@ function Search() {
                 <div className="right-section">
                     <Header />
                     <ListHead />
-                    {resultList.map((item)=>{<ListChildren songNumber={"Allo"} songName={item.name} songAlbum={item.album.name} songDuration={item.duration_ms} />})}
+                    {resultList.map((item)=>(<ListChildren songNumber={"Allo"} songName={item.name} songAlbum={item.album.name} songDuration={item.duration_ms} />))}
                     {/* <ListChildren /> */}
                 </div>
                 {console.log(resultList)}

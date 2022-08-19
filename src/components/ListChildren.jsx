@@ -1,3 +1,5 @@
+import "../styles/list.css"
+
 function ListChildren({songNumber, songName, songAlbum, songDuration}) {
     return (
         <div className="page__list-children font-size-19">
