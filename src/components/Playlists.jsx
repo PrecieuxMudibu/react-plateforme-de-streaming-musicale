@@ -4,7 +4,7 @@ import Header from "./Header"
 import LeftSection from "./LeftSection"
 import Card from "./Card"
 import { applicationContext } from "../App"
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom"
 
 function Playlists() {
     const onTheSpotifyCount = new SpotifyWebApi()
@@ -33,14 +33,14 @@ function Playlists() {
                     <section>
                         <h1 className="page__first-title">Playlists</h1>
                         {playlists.map((item) => (
-                        <Link to="/playlists/ecouter-une-playlist">
-                            <Card
-                                identifiant={item.id}
-                                image={item.images[0].url}
-                                bigTitle={item.name}
-                                name={`By ${name}`}
-                            />
-                        </Link>
+                            <Link to="/ecouter-une-playlist">
+                                <Card
+                                    identifiant={item.id}
+                                    image={item.images[0].url}
+                                    bigTitle={item.name}
+                                    name={`By ${name}`}
+                                />
+                            </Link>
                         ))}
                     </section>
                 </div>
