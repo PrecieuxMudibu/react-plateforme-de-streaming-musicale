@@ -17,7 +17,7 @@ function Search() {
     //     return this.search(query, ['track'], options, callback);
     //   };
     const onTheSpotifyCount = new SpotifyWebApi()
-    const { token, inputValue, updateInputValue } =
+    const { token, inputValue, updateInputValue, uriToPlay, setUriToPlay } =
         useContext(applicationContext)
 
     const [resultList, updateResultList] = useState([])

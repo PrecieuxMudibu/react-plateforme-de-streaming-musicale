@@ -32,10 +32,10 @@ function Playlists() {
                         <h1 className="page__first-title">Playlists</h1>
                         {playlists.map((item) => (
                             <Link
-                                to={`/ecouter-une-playlist/${item.id}`}
+                                to={`/ecouter-une-playlist/${item.name}/${item.id}`}
                                 // state={{ id: item.id }}
                             >
-                                <Card
+                                <Card 
                                     identifiant={item.id}
                                     image={item.images[0].url}
                                     bigTitle={item.name}

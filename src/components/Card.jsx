@@ -1,6 +1,7 @@
 import "../styles/card.css"
 
-function Card({ identifiant, image, bigTitle, name }) {
+function Card({ identifiant, image, bigTitle, name, uri }) {
+    const uriChanson={uri}
     return (
         <div key={identifiant} className="card">
             <img className="card__image" src={image} alt="" />
