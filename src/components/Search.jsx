@@ -51,10 +51,12 @@ function Search() {
                     <ListHead />
                     {resultList.map((item, index) => (
                         <ListChildren
-                            songNumber={"Allo"}
+                            songId={item.id}
+                            songNumber={index}
                             songName={item.name}
                             songAlbum={item.album.name}
                             songDuration={item.duration_ms}
+                            songUri={item.uri}
                         />
                     ))}
                     {/* <ListChildren /> */}
@@ -63,7 +65,8 @@ function Search() {
             </div>
             <AudioBar />
             <h1>{inputValue}</h1>
-            <SpotifyPlayer token={token} uris={[{ uriToPlay }]} />
+            <SpotifyPlayer token={token} uris={uriToPlay} />
+            {/* {console.log(uriToPlay)} */}
         </>
     )
 }

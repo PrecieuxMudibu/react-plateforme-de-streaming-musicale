@@ -8,7 +8,6 @@ import Playlists from "./components/Playlists"
 import React, { createContext } from "react"
 import { useState } from "react"
 import PlaylistSelected from "./components/PlaylistSelected"
-import LeftSection from "./components/LeftSection"
 
 const applicationContext = createContext()
 
