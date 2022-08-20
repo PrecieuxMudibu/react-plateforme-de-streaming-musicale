@@ -67,6 +67,10 @@ function PlaylistSelected() {
                     {playlistTracks.map((item, index)=>(<ListChildren songNumber={index} songName={item.track.name} songAlbum={item.track.album.name} songDuration={`Minute : ${item.track.duration_ms/1000/60} /// Secondes :`} />))}
 
                 </section>
+                <SpotifyPlayer
+                    token={token}
+                    uris={[{uriToPlay}]}
+                />
             </div>
         </div>
     )

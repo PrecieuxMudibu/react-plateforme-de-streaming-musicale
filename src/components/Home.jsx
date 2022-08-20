@@ -7,7 +7,7 @@ import { applicationContext } from "../App"
 import SpotifyPlayer from "react-spotify-web-playback"
 
 function Home() {
-    const { token, setToken, uriToPlay, setUriToPlay } = useContext(applicationContext)
+    const { token, setToken, uriToPlay } = useContext(applicationContext)
     useEffect(() => {
         const hash = window.location.hash
         let token = window.localStorage.getItem("token")
@@ -69,7 +69,7 @@ function Home() {
                 </section>
                 <SpotifyPlayer
                     token={token}
-                    uris={["spotify:artist:6HQYnRM4OzToCYPpVBInuU"]}
+                    uris={uriToPlay}
                 />
             </div>
         </div>

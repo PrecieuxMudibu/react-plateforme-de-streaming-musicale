@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import SpotifyWebApi from "spotify-web-api-js"
-
+import SpotifyPlayer from "react-spotify-web-playback"
 import LeftSection from "./LeftSection"
 import ListHead from "./ListHead"
 import ListChildren from "./ListChildren"
@@ -49,7 +49,7 @@ function Search() {
                 <div className="right-section">
                     <Header />
                     <ListHead />
-                    {resultList.map((item) => (
+                    {resultList.map((item, index) => (
                         <ListChildren
                             songNumber={"Allo"}
                             songName={item.name}
@@ -63,6 +63,7 @@ function Search() {
             </div>
             <AudioBar />
             <h1>{inputValue}</h1>
+            <SpotifyPlayer token={token} uris={[{ uriToPlay }]} />
         </>
     )
 }
