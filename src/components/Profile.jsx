@@ -16,8 +16,6 @@ function Profile() {
         onTheSpotifyCount.getMe(function (err, data) {
             if (err) console.error("Erreur", err)
             else {
-                console.log("Moi", data.id)
-                console.log(data.images[0].url)
                 setName(data.display_name)
                 setProfileImage(data.images[0].url)
                 setUserId(data.id)

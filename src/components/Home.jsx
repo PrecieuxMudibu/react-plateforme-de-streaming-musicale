@@ -4,9 +4,10 @@ import Header from "./Header"
 import LeftSection from "./LeftSection"
 import Card from "./Card"
 import { applicationContext } from "../App"
+import SpotifyPlayer from "react-spotify-web-playback"
 
 function Home() {
-    const { token, setToken } = useContext(applicationContext)
+    const { token, setToken, uriToPlay } = useContext(applicationContext)
     useEffect(() => {
         const hash = window.location.hash
         let token = window.localStorage.getItem("token")
@@ -31,21 +32,23 @@ function Home() {
     }
 
     const onTheSpotifyCount = new SpotifyWebApi()
-    
+
     const [recentlyPlayed, setRecentlyPlayed] = useState([])
-    
+
     useEffect(() => {
         onTheSpotifyCount.setAccessToken(token)
         onTheSpotifyCount.getMyRecentlyPlayedTracks(function (err, data) {
             if (err) console.error("Erreur", err)
             else {
-                console.log("Récemment Jouées", data)
-                // console.log("Nombre", data.items)
+                // console.log("Récemment Jouées", data)
+                console.log("URI", data.items[0].track.uri)
                 setRecentlyPlayed(data.items)
             }
         })
     }, [token])
     //  console.log(inputValue)
+    // console.log(uriChanson)
+
     return (
         <div className="page">
             <LeftSection />
@@ -60,9 +63,14 @@ function Home() {
                             image={item.track.album.images[0].url}
                             bigTitle={item.track.name}
                             name={item.track.artists[0].name}
+                            uri={item.track.uri}
                         />
                     ))}
                 </section>
+                <SpotifyPlayer
+                    token={token}
+                    uris={uriToPlay}
+                />
             </div>
         </div>
     )

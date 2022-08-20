@@ -18,11 +18,9 @@ function Playlists() {
                 setPlaylists(data.items)
             }
         })
-
-        onTheSpotifyCount.getL
     }, [token])
 
-    console.log("playlists use state", playlists)
+    // console.log("playlists use state", playlists)
 
     return (
         <>
@@ -33,8 +31,11 @@ function Playlists() {
                     <section>
                         <h1 className="page__first-title">Playlists</h1>
                         {playlists.map((item) => (
-                            <Link to="/ecouter-une-playlist">
-                                <Card
+                            <Link
+                                to={`/ecouter-une-playlist/${item.name}/${item.id}`}
+                                // state={{ id: item.id }}
+                            >
+                                <Card 
                                     identifiant={item.id}
                                     image={item.images[0].url}
                                     bigTitle={item.name}
