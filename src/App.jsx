@@ -22,7 +22,7 @@ function App() {
     return (
         <>
             <applicationContext.Provider
-                value={{ inputValue, updateInputValue, token, setToken, userId, setUserId, name, setName }}
+                value={{ inputValue, updateInputValue, token, setToken, userId, setUserId, name, setName}}
             >
                 
                 <Routes>
@@ -30,7 +30,7 @@ function App() {
                     <Route path="/accueil" element={<Home />} />
                     <Route path="/rechercher" element={<Search />} />
                     <Route path="/playlists" element={<Playlists />} />
-                    <Route path="/ecouter-une-playlist" element={<PlaylistSelected />} />
+                    <Route path="/ecouter-une-playlist/:playlistId" element={<PlaylistSelected />} identifiant={"111"}/>
 
                     <Route path="/chansons-aimées" element={<LikedSongs />} />
                 </Routes>

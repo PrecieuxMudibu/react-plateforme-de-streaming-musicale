@@ -20,7 +20,7 @@ function Search() {
     const { token, inputValue, updateInputValue } =
         useContext(applicationContext)
 
-        const [resultList, updateResultList] = useState ([])
+    const [resultList, updateResultList] = useState([])
     console.log(inputValue)
     useEffect(() => {
         // let search = `${inputValue}`;
@@ -31,11 +31,11 @@ function Search() {
             if (err) console.error(err)
             else {
                 console.log("Mes chansons", data.tracks)
-                console.log("Titre de la chanson :", data.tracks.items[0].name)
-                console.log("Id de la chanson :", data.tracks.items[0].id)
-                console.log("URI de la chanson :", data.tracks.items[0].uri)
-                console.log("Album de la chanson :", data.tracks.items[0].album.name)
-                console.log("Durée de la chanson :", data.tracks.items[0].duration_ms)
+                // console.log("Titre de la chanson :", data.tracks.items[0].name)
+                // console.log("Id de la chanson :", data.tracks.items[0].id)
+                // console.log("URI de la chanson :", data.tracks.items[0].uri)
+                // console.log("Album de la chanson :", data.tracks.items[0].album.name)
+                // console.log("Durée de la chanson :", data.tracks.items[0].duration_ms)
                 // console.log('Ce que je cherche', typeof(inputValue))
                 // console.log('Search', search)
                 updateResultList(data.tracks.items)
@@ -49,7 +49,14 @@ function Search() {
                 <div className="right-section">
                     <Header />
                     <ListHead />
-                    {resultList.map((item)=>(<ListChildren songNumber={"Allo"} songName={item.name} songAlbum={item.album.name} songDuration={item.duration_ms} />))}
+                    {resultList.map((item) => (
+                        <ListChildren
+                            songNumber={"Allo"}
+                            songName={item.name}
+                            songAlbum={item.album.name}
+                            songDuration={item.duration_ms}
+                        />
+                    ))}
                     {/* <ListChildren /> */}
                 </div>
                 {console.log(resultList)}
