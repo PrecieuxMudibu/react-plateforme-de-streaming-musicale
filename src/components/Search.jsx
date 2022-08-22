@@ -65,7 +65,7 @@ function Search() {
             </div>
             <AudioBar />
             <h1>{inputValue}</h1>
-            <SpotifyPlayer token={token} uris={uriToPlay} />
+            <SpotifyPlayer token={token} uris={uriToPlay} play={true} />
             {/* {console.log(uriToPlay)} */}
         </>
     )

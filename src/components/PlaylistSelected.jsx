@@ -67,6 +67,7 @@ function PlaylistSelected() {
                 <SpotifyPlayer
                     token={token}
                     uris={uriToPlay}
+                    play={true}
                 />
                 {console.log(uriToPlay)}
             </div>

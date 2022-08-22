@@ -34,5 +34,9 @@
     margin:1rem;
     padding: 1rem;
     border-radius: .6rem;
+}
+
+.page__link--active {
     background: #053B52;
+
 }

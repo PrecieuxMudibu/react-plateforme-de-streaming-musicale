@@ -8,7 +8,8 @@ import { Link } from "react-router-dom"
 
 function Playlists() {
     const onTheSpotifyCount = new SpotifyWebApi()
-    const { token, userId, name } = useContext(applicationContext)
+    const { token, userId, name,activeLink, updateActiveLink } = useContext(applicationContext)
+    updateActiveLink('playlists')
     const [playlists, setPlaylists] = useState([])
     useEffect(() => {
         onTheSpotifyCount.setAccessToken(token)

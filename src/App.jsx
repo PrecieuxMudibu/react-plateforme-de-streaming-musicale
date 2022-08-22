@@ -17,12 +17,13 @@ function App() {
     const [userId, setUserId]  = useState("")
     const [name, setName] = useState("")
     const [uriToPlay, setUriToPlay]=useState("")
+    const [activeLink, updateActiveLink] = useState("")
 
 
     return (
         <>
             <applicationContext.Provider
-                value={{ inputValue, updateInputValue, token, setToken, userId, setUserId, name, setName, uriToPlay, setUriToPlay}}
+                value={{ inputValue, updateInputValue, token, setToken, userId, setUserId, name, setName, uriToPlay, setUriToPlay, activeLink, updateActiveLink}}
             >
                 
                 <Routes>
