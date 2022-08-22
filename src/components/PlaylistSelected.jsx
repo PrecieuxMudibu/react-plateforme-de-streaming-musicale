@@ -9,22 +9,16 @@ import { applicationContext } from "../App"
 import SpotifyPlayer from "react-spotify-web-playback"
 
 import SpotifyWebApi from "spotify-web-api-js"
-// import { useLocation } from "react-router-dom"
 import { useParams } from 'react-router-dom'
 
 function PlaylistSelected() {
-    // const location = useLocation(),
-    //     id = location.state.id
-
-    // console.log(id)
+ 
     const { playlistName,playlistId } = useParams()
-    console.log("Id",playlistId)
-    console.log("Name",playlistName)
 
     const { token, name, uriToPlay, setUriToPlay } = useContext(applicationContext)
     const onTheSpotifyCount = new SpotifyWebApi()
     const [playlistTracks, setPlaylistTracks] = useState([])
-    
+    const [imagePlaylist, setImagePlaylist]=useState('')
     useEffect(()=>{
         onTheSpotifyCount.setAccessToken(token)
         onTheSpotifyCount.getPlaylistTracks(playlistId, function (err, data) {
@@ -32,13 +26,14 @@ function PlaylistSelected() {
             else {
                 // console.log (data)
                 // console.log ("Tableau",data.items)
-                // console.log ("Image",data.items[0].track.album.images[0].url)
                 // console.log ("Titre de la chanson de la playlists :",data.items[0].track.name)
                 // console.log ("Album de la chanson de la playlists :",data.items[0].track.album.name)
                 // console.log ("Durée d'une chanson de la playlists :",data.items[0].track.duration_ms)
                 // console.log ("Id d'une chanson de la playlists :",data.items[0].track.id)
                 // console.log ("URI d'une chanson de la playlists :",data.items[0].track.uri)
+                console.log ("Image",data.items[0].track.album.images[0].url)
                 setPlaylistTracks(data.items)
+                setImagePlaylist(data.items[0].track.album.images[0].url)
             }
         })
     }, [token])
@@ -49,12 +44,12 @@ function PlaylistSelected() {
         <div className="page">
             <LeftSection />
             <div className="right-section">
-                {console.log(playlistTracks)}
+                {console.log("Image",playlistTracks)}
                 <Header />
                 <section>
                     <h1 className="page__first-title">Playlists</h1>
                     <Banner
-                        image={ironMan}
+                        image={imagePlaylist}
                         bigTitle={playlistName}
                         name={name}
                     />
@@ -69,7 +64,7 @@ function PlaylistSelected() {
                     uris={uriToPlay}
                     play={true}
                 />
-                {console.log(uriToPlay)}
+                {/* {console.log(uriToPlay)} */}
             </div>
         </div>
     )
