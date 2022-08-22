@@ -1,4 +1,4 @@
-import { MdArrowDropDown } from "react-icons/md"
+import { RiLogoutBoxRFill } from "react-icons/ri"
 import { useState, useEffect, useContext } from "react"
 import { applicationContext } from "../App"
 import SpotifyWebApi from "spotify-web-api-js"
@@ -33,10 +33,10 @@ function Profile() {
                 />
                 <span className="page__profile-text">{name}</span>
                 <span className="page__profile-icon">
-                    <MdArrowDropDown />
+                    <RiLogoutBoxRFill />
                 </span>
             </p>
-            <p className="page__progile-logout">Déconnexion</p>
+            {/* <p className="page__progile-logout">Déconnexion</p> */}
         </div>
     )
 }

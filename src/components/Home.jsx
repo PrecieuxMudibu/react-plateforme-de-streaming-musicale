@@ -68,6 +68,7 @@ function Home() {
                         />
                     ))}
                 </section>
+                {console.log(token)}
                 <SpotifyPlayer
                     token={token}
                     uris={uriToPlay}

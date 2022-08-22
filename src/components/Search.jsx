@@ -8,6 +8,8 @@ import Header from "./Header"
 import AudioBar from "./AudioBar"
 import { useContext } from "react"
 import { applicationContext } from "../App"
+import {findDuration} from '../functions/function'
+
 
 import "../styles/search.css"
 import "../styles/page.css"
@@ -55,7 +57,7 @@ function Search() {
                             songNumber={index}
                             songName={item.name}
                             songAlbum={item.album.name}
-                            songDuration={item.duration_ms}
+                            songDuration={findDuration(item.duration_ms)}
                             songUri={item.uri}
                         />
                     ))}

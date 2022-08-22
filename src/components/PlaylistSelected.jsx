@@ -10,6 +10,7 @@ import SpotifyPlayer from "react-spotify-web-playback"
 
 import SpotifyWebApi from "spotify-web-api-js"
 import { useParams } from 'react-router-dom'
+import {findDuration} from '../functions/function'
 
 function PlaylistSelected() {
  
@@ -56,7 +57,7 @@ function PlaylistSelected() {
                     <ListHead />
                    
 
-                    {playlistTracks.map((item, index)=>(<ListChildren songNumber={index} songName={item.track.name} songAlbum={item.track.album.name} songDuration={`Minute : ${item.track.duration_ms/1000/60} /// Secondes :`} songUri={item.track.uri} />))}
+                    {playlistTracks.map((item, index)=>(<ListChildren songNumber={index} songName={item.track.name} songAlbum={item.track.album.name} songDuration={findDuration(item.track.duration_ms)} songUri={item.track.uri} />))}
 
                 </section>
                 <SpotifyPlayer
