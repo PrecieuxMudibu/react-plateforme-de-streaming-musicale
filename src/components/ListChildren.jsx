@@ -1,8 +1,14 @@
+import { applicationContext } from "../App"
+import { useContext } from "react"
 import "../styles/list.css"
 
-function ListChildren({songNumber, songName, songAlbum, songDuration}) {
+function ListChildren({songId, songNumber, songName, songAlbum, songDuration, songUri}) {
+    const {uriToPlay, setUriToPlay} = useContext(applicationContext)
+    const uri=songUri
+    
     return (
-        <div className="page__list-children font-size-19">
+        <div key={songId} className="page__list-children font-size-19" onClick={()=> setUriToPlay(uri)
+        }>
             <div className="page__list-first-column">{songNumber}</div>
             <div className="page__list-three-last-columns">
                 {songName}
