@@ -57,7 +57,7 @@ function PlaylistSelected() {
                     <ListHead />
                    
 
-                    {playlistTracks.map((item, index)=>(<ListChildren songNumber={index} songName={item.track.name} songAlbum={item.track.album.name} songDuration={findDuration(item.track.duration_ms)} songUri={item.track.uri} />))}
+                    {playlistTracks.map((item, index)=>(<ListChildren songNumber={index} songName={item.track.name} songImage={item.track.album.images[0].url} songAlbum={item.track.album.name} songDuration={findDuration(item.track.duration_ms)} songUri={item.track.uri} />))}
 
                 </section>
                 <SpotifyPlayer

@@ -24,6 +24,7 @@
 .page__list-children {
     display: flex;
     padding: 1rem 0;
+    align-items: center;
 
 }
 
@@ -31,6 +32,29 @@
     width: 5%;
 }
 
-.page__list-three-last-columns {
-    width:30%
+.page__list-second-column {
+    width:45%;
+
 }
+
+.page__list-third-column {
+    width:35%;
+
+}
+
+.page__list-last-column {
+    width:5%;
+
+}
+.flex {
+    display: flex;
+    align-items: center;
+
+}
+
+.page__imageMusic {
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+}
+
