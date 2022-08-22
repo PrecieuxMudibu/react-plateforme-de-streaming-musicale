@@ -57,7 +57,7 @@ function Home() {
                 <Header />
                 <section>
                     <h1 className="page__first-title">Ecoutées récemment</h1>
-
+        <div className='container'>
                     {recentlyPlayed.map((item) => (
                         <Card
                             identifiant={item.track.id}
@@ -67,6 +67,7 @@ function Home() {
                             uri={item.track.uri}
                         />
                     ))}
+                    </div>
                 </section>
                 {console.log(token)}
                 <SpotifyPlayer
