@@ -7,7 +7,7 @@
     font-weight: bold;
     margin-top: 2.6rem;
     margin-left: 10%;
-    margin-bottom: 1rem;
+    margin-bottom: 7%;
 }
 
 .page__logo-img {
@@ -27,11 +27,14 @@
     color: white;
     font-size: 1.9rem;
     font-weight: bold;
-    margin:0 5%;
+    margin:3% 5%;
     padding: 1.5rem;
     border-radius: .6rem;
 }
+.page__link:hover {
+    background: #053B52;
 
+}
 .page__link--active {
     background: #053B52;
 }

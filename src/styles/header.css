@@ -1,8 +1,9 @@
 header {
     display: flex;
     justify-content: space-between;
-    position: relative;
+    margin-top: 3%;
 }
+
 .page__search {
     display: inline-block;
     /* border: 1px solid black; */

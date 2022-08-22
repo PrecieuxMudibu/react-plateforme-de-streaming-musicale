@@ -9,7 +9,7 @@ import AudioBar from "./AudioBar"
 import { useContext } from "react"
 import { applicationContext } from "../App"
 import { findDuration } from "../functions/function"
-
+import Spotifyplayer from "./spotifyPlayer"
 import "../styles/search.css"
 import "../styles/page.css"
 
@@ -60,7 +60,7 @@ function Search() {
                 </div>
             </div>
             <AudioBar />
-            <SpotifyPlayer token={token} uris={uriToPlay} play={true} />
+            <Spotifyplayer/>
             {/* {console.log(uriToPlay)} */}
         </>
     )

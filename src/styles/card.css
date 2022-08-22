@@ -1,4 +1,4 @@
-.container {
+.card__container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1.5rem;
@@ -19,6 +19,10 @@
     display: block;
 }
 
+.card:hover {
+    box-shadow:0 .1px 3rem #00000049;
+}
+
 .card__group-text {
     width:95%;
 }
@@ -28,12 +32,13 @@
 }
 
 .card__title {
+    margin-top: 1.5rem;
     font-size: 2.1rem;
     font-weight: 450;
 }
 
 .card__text {
-    margin-top: .3rem;
+    margin-top: .5rem;
     font-size: 1.5rem;
     color:#DBDBDB;
     font-weight: 450;
@@ -53,4 +58,9 @@
     top: 20%;
     left: 20%;
     color: rgba(255, 255, 255, 0.671);
+}
+
+.white-color {
+    color: white;
+    text-decoration: none;
 }
