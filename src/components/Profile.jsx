@@ -6,6 +6,11 @@ import SpotifyWebApi from "spotify-web-api-js"
 function Profile() {
     const { token, setToken, userId, setUserId, name, setName } =
         useContext(applicationContext)
+
+        const logout = () => {
+            setToken("")
+            window.localStorage.removeItem("token")
+        }
     // const [name, setName] = useState("")
     const [profileImage, setProfileImage] = useState()
 
@@ -32,7 +37,7 @@ function Profile() {
                     alt="photo de profil"
                 />
                 <span className="page__profile-text">{name}</span>
-                <span className="page__profile-icon">
+                <span className="page__profile-icon" onClick={logout}>
                     <RiLogoutBoxRFill />
                 </span>
             </p>
