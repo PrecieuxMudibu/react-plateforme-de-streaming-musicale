@@ -3,6 +3,7 @@ import SpotifyWebApi from "spotify-web-api-js"
 import SpotifyPlayer from "react-spotify-web-playback"
 import LeftSection from "./LeftSection"
 import ListHead from "./ListHead"
+import Login from "./Login"
 import ListChildren from "./ListChildren"
 import Header from "./Header"
 import AudioBar from "./AudioBar"
@@ -35,34 +36,38 @@ function Search() {
             })
     }, [inputValue])
 
-    return (
-        <>
-            <div className="page">
-                <LeftSection />
-                <div className="right-section">
-                    <Header />
+    if (token=='') {
+        return <Login />
+    } else {
 
-                    <ListHead />
-                    {resultList !== []
-                        ? resultList.map((item, index) => (
-                              <ListChildren
-                                  songId={item.id}
-                                  songNumber={index}
-                                  songImage={item.album.images[1].url}
-                                  songName={item.name}
-                                  songAlbum={item.album.name}
-                                  songDuration={findDuration(item.duration_ms)}
-                                  songUri={item.uri}
-                              />
-                          ))
-                        : null}
-                    {/* <ListChildren /> */}
+        return (
+            <>
+                <div className="page">
+                    <LeftSection />
+                    <div className="right-section">
+                        <Header />
+    
+                        <ListHead />
+                        {resultList !== []
+                            ? resultList.map((item, index) => (
+                                  <ListChildren
+                                      songId={item.id}
+                                      songNumber={index}
+                                      songImage={item.album.images[1].url}
+                                      songName={item.name}
+                                      songAlbum={item.album.name}
+                                      songDuration={findDuration(item.duration_ms)}
+                                      songUri={item.uri}
+                                  />
+                              ))
+                            : null}
+                        {/* <ListChildren /> */}
+                    </div>
                 </div>
-            </div>
-            <AudioBar />
-            <Spotifyplayer/>
-            {/* {console.log(uriToPlay)} */}
-        </>
-    )
+                <AudioBar />
+                <Spotifyplayer/>
+            </>
+        )
+    }
 }
 export default Search

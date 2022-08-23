@@ -5,6 +5,7 @@ import LeftSection from "./LeftSection"
 import Card from "./Card"
 import { applicationContext } from "../App"
 import Spotifyplayer from "./spotifyPlayer"
+import Login from "./Login"
 
 function Home() {
     const { token, setToken, uriToPlay, activeLink, updateActiveLink } = useContext(applicationContext)
@@ -27,11 +28,6 @@ function Home() {
         setToken(token)
     }, [])
 
-    const logout = () => {
-        setToken("")
-        window.localStorage.removeItem("token")
-    }
-
     const onTheSpotifyCount = new SpotifyWebApi()
 
     const [recentlyPlayed, setRecentlyPlayed] = useState([])
@@ -46,6 +42,10 @@ function Home() {
             }
         })
     }, [token])
+
+    if (token=='') {
+        return (<Login />)
+    } else {
 
     return (
         <>
@@ -73,7 +73,7 @@ function Home() {
         </div>
                 <Spotifyplayer/>
                 </>
-    )
+    )}
 }
 
 export default Home

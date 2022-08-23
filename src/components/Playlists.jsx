@@ -5,6 +5,7 @@ import LeftSection from "./LeftSection"
 import Card from "./Card"
 import { applicationContext } from "../App"
 import { Link } from "react-router-dom"
+import Login from "./Login"
 
 function Playlists() {
     const onTheSpotifyCount = new SpotifyWebApi()
@@ -20,35 +21,39 @@ function Playlists() {
             }
         })
     }, [token])
-
-    return (
-        <>
-            <div className="page">
-                <LeftSection />
-                <div className="right-section">
-                    <Header />
-                    <section>
-                        <h1 className="page__first-title">Playlists</h1>
-                        <div className='card__container'>
-
-                        {playlists.map((item) => (
-                            <Link
-                                to={`/ecouter-une-playlist/${item.name}/${item.id}`}
-                            className='white-color'>
-                                <Card 
-                                    identifiant={item.id}
-                                    image={item.images[0].url}
-                                    bigTitle={item.name}
-                                    name={`By ${name}`}
-                                />
-                            </Link>
-                        ))}
-                        </div>
-                    </section>
+    if (token=='') {
+        return (<Login />)
+    } else {
+        return (
+            <>
+                <div className="page">
+                    <LeftSection />
+                    <div className="right-section">
+                        <Header />
+                        <section>
+                            <h1 className="page__first-title">Playlists</h1>
+                            <div className='card__container'>
+    
+                            {playlists.map((item) => (
+                                <Link
+                                    to={`/ecouter-une-playlist/${item.name}/${item.id}`}
+                                className='white-color'>
+                                    <Card 
+                                        identifiant={item.id}
+                                        image={item.images[0].url}
+                                        bigTitle={item.name}
+                                        name={`By ${name}`}
+                                    />
+                                </Link>
+                            ))}
+                            </div>
+                        </section>
+                    </div>
                 </div>
-            </div>
-        </>
-    )
+            </>
+        )
+    }
+    
 }
 
 export default Playlists
