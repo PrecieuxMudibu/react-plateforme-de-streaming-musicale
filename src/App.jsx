@@ -46,7 +46,7 @@ function App() {
                         path="/ecouter-une-playlist/:playlistName/:playlistId"
                         element={<PlaylistSelected />}
                     />
-                    <Route path="/chansons-aimées" element={<LikedSongs />} />
+                    <Route path="/chansons-aimees" element={<LikedSongs />} />
                 </Routes>
             </applicationContext.Provider>
         </>

@@ -20,7 +20,7 @@ function LeftSection () {
                     <nav className="page__navigation">
                         <Link className="page__link page__link--active" to="/accueil"><span className="icon"><FiHome /></span>Accueil</Link>
                         <Link className="page__link" to="/playlists"><span className="icon"><RiPlayListFill /></span>Playlists</Link>
-                        <Link className="page__link" to="/chansons-aimées"><span className="icon"><BsHeartFill /></span>Chansons aimées</Link>
+                        <Link className="page__link" to="/chansons-aimees"><span className="icon"><BsHeartFill /></span>Chansons aimées</Link>
                     </nav>
             </div>
         )
