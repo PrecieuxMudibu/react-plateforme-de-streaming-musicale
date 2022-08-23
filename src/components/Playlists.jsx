@@ -21,8 +21,6 @@ function Playlists() {
         })
     }, [token])
 
-    // console.log("playlists use state", playlists)
-
     return (
         <>
             <div className="page">
@@ -31,11 +29,12 @@ function Playlists() {
                     <Header />
                     <section>
                         <h1 className="page__first-title">Playlists</h1>
+                        <div className='card__container'>
+
                         {playlists.map((item) => (
                             <Link
                                 to={`/ecouter-une-playlist/${item.name}/${item.id}`}
-                                // state={{ id: item.id }}
-                            >
+                            className='white-color'>
                                 <Card 
                                     identifiant={item.id}
                                     image={item.images[0].url}
@@ -44,6 +43,7 @@ function Playlists() {
                                 />
                             </Link>
                         ))}
+                        </div>
                     </section>
                 </div>
             </div>

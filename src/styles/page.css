@@ -5,14 +5,24 @@
 
 .page__first-title {
     font-size: 2.9rem;
+    margin: 3.5% 0;
 }
 
+.page__spotify-player {
+    position: sticky;
+    bottom: 0;
+}
 .icon {
     margin-right: 2rem;
+}
+::-webkit-scrollbar {
+    display: none;
 }
 
 .right-section {
     background-color: #053B52;
-    width: 79%;
-    padding-left: 3rem;
+    width: 80%;
+    padding:0 3%;
+    height: 160vh;
+    overflow-y: scroll;
 }

@@ -1,6 +1,7 @@
 import "../styles/card.css"
 import { applicationContext } from "../App"
 import { useContext } from "react"
+import {TbPlayerPlay} from 'react-icons/tb'
 
 function Card({ identifiant, image, bigTitle, name, uri }) {
     const { uriToPlay, setUriToPlay } = useContext(applicationContext)
@@ -16,9 +17,10 @@ function Card({ identifiant, image, bigTitle, name, uri }) {
             onClick={() => setUriToPlay(uriSong)}
         >
             <img className="card__image" src={image} alt="" />
-            <h2 className="card__title">{bigTitle}</h2>
+            <div className="card__group-text"><h2 className="card__title">{bigTitle}</h2>
             <p className="card__text">{name}</p>
-            {console.log("URI to play", uriToPlay)}
+            </div>
+            <div className='card__icone-group'><span className='card__icone-player'><TbPlayerPlay /></span></div>
         </div>
     )
 }

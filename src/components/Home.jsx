@@ -4,7 +4,7 @@ import Header from "./Header"
 import LeftSection from "./LeftSection"
 import Card from "./Card"
 import { applicationContext } from "../App"
-import SpotifyPlayer from "react-spotify-web-playback"
+import Spotifyplayer from "./spotifyPlayer"
 
 function Home() {
     const { token, setToken, uriToPlay, activeLink, updateActiveLink } = useContext(applicationContext)
@@ -41,23 +41,21 @@ function Home() {
         onTheSpotifyCount.getMyRecentlyPlayedTracks(function (err, data) {
             if (err) console.error("Erreur", err)
             else {
-                // console.log("Récemment Jouées", data)
                 console.log("URI", data.items[0].track.uri)
                 setRecentlyPlayed(data.items)
             }
         })
     }, [token])
-    //  console.log(inputValue)
-    // console.log(uriChanson)
 
     return (
+        <>
         <div className="page">
             <LeftSection />
             <div className="right-section">
                 <Header />
                 <section>
                     <h1 className="page__first-title">Ecoutées récemment</h1>
-
+        <div className='card__container'>
                     {recentlyPlayed.map((item) => (
                         <Card
                             identifiant={item.track.id}
@@ -67,14 +65,14 @@ function Home() {
                             uri={item.track.uri}
                         />
                     ))}
+                    </div>
                 </section>
-                <SpotifyPlayer
-                    token={token}
-                    uris={uriToPlay}
-                    play={true}
-                />
+                {console.log(token)}
+                
             </div>
         </div>
+                <Spotifyplayer/>
+                </>
     )
 }
 

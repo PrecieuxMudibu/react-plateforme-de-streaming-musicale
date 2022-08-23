@@ -1,15 +1,3 @@
-/* .page__list {
-    font-size: 1.9rem;
-}
-
-.page__list td {
-    padding: 1rem  10rem 1rem 1rem;
-}
-
-.page__list-head {
-    font-weight: bold;
-} */
-
 .font-size-19 {
     font-size: 1.9rem;
 }
@@ -24,13 +12,46 @@
 .page__list-children {
     display: flex;
     padding: 1rem 0;
+    align-items: center;
+    border-radius: 6px;
 
+}
+
+.page__list-children:hover {
+    background: #0e4A67;
+    cursor: pointer;
 }
 
 .page__list-first-column {
     width: 5%;
+    padding-left: 2% ;
 }
 
-.page__list-three-last-columns {
-    width:30%
+.page__list-second-column {
+    width:48%;
+    padding-right: 3%;
+    padding-left: 2% ;
+
+
 }
+
+.page__list-third-column {
+    width:28%;
+}
+
+.page__list-last-column {
+    width:5%;
+
+}
+.flex {
+    display: flex;
+    align-items: center;
+
+}
+
+.page__imageMusic {
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+}
+

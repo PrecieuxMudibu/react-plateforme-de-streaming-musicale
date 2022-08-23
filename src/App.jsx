@@ -14,25 +14,39 @@ const applicationContext = createContext()
 function App() {
     const [inputValue, updateInputValue] = useState("")
     const [token, setToken] = useState("")
-    const [userId, setUserId]  = useState("")
+    const [userId, setUserId] = useState("")
     const [name, setName] = useState("")
-    const [uriToPlay, setUriToPlay]=useState("")
+    const [uriToPlay, setUriToPlay] = useState("")
     const [activeLink, updateActiveLink] = useState("")
-
 
     return (
         <>
             <applicationContext.Provider
-                value={{ inputValue, updateInputValue, token, setToken, userId, setUserId, name, setName, uriToPlay, setUriToPlay, activeLink, updateActiveLink}}
+                value={{
+                    inputValue,
+                    updateInputValue,
+                    token,
+                    setToken,
+                    userId,
+                    setUserId,
+                    name,
+                    setName,
+                    uriToPlay,
+                    setUriToPlay,
+                    activeLink,
+                    updateActiveLink,
+                }}
             >
-                
                 <Routes>
                     <Route path="/" element={<Login />} />
                     <Route path="/accueil" element={<Home />} />
                     <Route path="/rechercher" element={<Search />} />
                     <Route path="/playlists" element={<Playlists />} />
-                    <Route path="/ecouter-une-playlist/:playlistName/:playlistId" element={<PlaylistSelected />} />
-                    <Route path="/chansons-aimées" element={<LikedSongs />} />
+                    <Route
+                        path="/ecouter-une-playlist/:playlistName/:playlistId"
+                        element={<PlaylistSelected />}
+                    />
+                    <Route path="/chansons-aimees" element={<LikedSongs />} />
                 </Routes>
             </applicationContext.Provider>
         </>
