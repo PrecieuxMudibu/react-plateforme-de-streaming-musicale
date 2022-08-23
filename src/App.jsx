@@ -37,7 +37,6 @@ function App() {
                     updateActiveLink,
                 }}
             >
-                <Router>
                     <Routes>
                         <Route path="/" element={<Login />} />
                         <Route path="/accueil" element={<Home />} />
@@ -52,7 +51,6 @@ function App() {
                             element={<LikedSongs />}
                         />
                     </Routes>
-                </Router>
             </applicationContext.Provider>
         </>
     )
