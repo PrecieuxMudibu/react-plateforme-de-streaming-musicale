@@ -2,9 +2,9 @@ import React from "react"
 import "../styles/login.css"
 import logo2 from "../images/logo2.png"
 function Login() {
-    const CLIENT_ID = "a62979cc04114573be6f1b1a78787db7"
+    const CLIENT_ID = "9d70a6094fc6486cb5d5a2af28105385"
     // const REDIRECT_URI = "http://localhost:5173"
-    const REDIRECT_URI = "http://localhost:5173/accueil"
+    const REDIRECT_URI = "https://musiiker.netlify.app/"
     const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
     const RESPONSE_TYPE = "token"
     return (
