@@ -1,5 +1,5 @@
 import "./App.css"
-import { Route, Routes } from "react-router-dom"
+import { Router, Route, Routes } from "react-router-dom"
 import Home from "./components/Home"
 import Login from "./components/Login"
 import Search from "./components/Search"
@@ -37,17 +37,22 @@ function App() {
                     updateActiveLink,
                 }}
             >
-                <Routes>
-                    <Route path="/" element={<Login />} />
-                    <Route path="/accueil" element={<Home />} />
-                    <Route path="/rechercher" element={<Search />} />
-                    <Route path="/playlists" element={<Playlists />} />
-                    <Route
-                        path="/ecouter-une-playlist/:playlistName/:playlistId"
-                        element={<PlaylistSelected />}
-                    />
-                    <Route path="/chansons-aimees" element={<LikedSongs />} />
-                </Routes>
+                <Router>
+                    <Routes>
+                        <Route path="/" element={<Login />} />
+                        <Route path="/accueil" element={<Home />} />
+                        <Route path="/rechercher" element={<Search />} />
+                        <Route path="/playlists" element={<Playlists />} />
+                        <Route
+                            path="/ecouter-une-playlist/:playlistName/:playlistId"
+                            element={<PlaylistSelected />}
+                        />
+                        <Route
+                            path="/chansons-aimees"
+                            element={<LikedSongs />}
+                        />
+                    </Routes>
+                </Router>
             </applicationContext.Provider>
         </>
     )
