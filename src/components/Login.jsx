@@ -4,8 +4,8 @@ import logo2 from "../images/logo2.png"
 function Login() {
     const CLIENT_ID = "a62979cc04114573be6f1b1a78787db7"
     // const REDIRECT_URI = "http://localhost:5173/accueil"
-    // const REDIRECT_URI = "https://musiker.vercel.app/accueil"
-    const REDIRECT_URI = "https://musiiker.netlify.app/accueil"
+    const REDIRECT_URI = "https://musiker.vercel.app/accueil"
+    // const REDIRECT_URI = "https://musiiker.netlify.app/accueil"
     const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
     const RESPONSE_TYPE = "token"
     return (
