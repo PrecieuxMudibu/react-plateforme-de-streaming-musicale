@@ -64,3 +64,14 @@
     color: white;
     text-decoration: none;
 }
+
+
+@media screen and (max-width: 700px) {
+
+    .card__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+
+    }
+}

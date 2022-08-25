@@ -6,15 +6,16 @@ header {
 
 .page__search {
     display: inline-block;
-    /* border: 1px solid black; */
-    margin-top: 2rem;
-    padding-bottom: 1.1rem;
+    margin-top: 2%;
+    /* margin-top: 2rem; */
+    padding-bottom: 1.5%;
     border-bottom: 1px solid white;
     width: 45%;
 }
 
 .page__search-icon {
     font-size: 2.4rem;
+    border: 1px solid black;
 }
 
 .page__profile {
@@ -30,26 +31,19 @@ header {
 }
 
 .page__profile-picture {
-    /* display: block; */
     width:4rem;
     height:4rem;
     border-radius: 100%;
     border: 1px solid white;
-
-    /* position: relative; */
     position: absolute;
-    /* margin-right: 1rem;    */
 }
 
 .page__profile-text {
     font-size: 2rem;
     font-weight: bold;
-    /* border: 1px solid white; */
-    /* position: absolute; */
     position: absolute;
     left: 6rem;
     top: .5rem;
-
 }
 
 .page__profile-logo {
@@ -81,10 +75,23 @@ header {
     outline: none;
     font-weight: bold;
     position: relative;
-    bottom: .4rem;
-    left: 1.5rem;
+    bottom: .4%;
+    left: 5%;
 }
 
 .page__input::placeholder {
     color:white;
+}
+
+@media screen and (max-width: 700px) {
+    .page__profile-text {
+        display: none; 
+    } 
+
+    .page__input {
+        bottom: 30%;
+        left: 20%;
+    }
+    
+    
 }

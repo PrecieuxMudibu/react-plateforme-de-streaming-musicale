@@ -18,9 +18,9 @@ function LeftSection () {
                             <span className="page__logo-text">Musiker</span>
                     </div>
                     <nav className="page__navigation">
-                        <Link className="page__link page__link--active" to="/accueil"><span className="icon"><FiHome /></span>Accueil</Link>
-                        <Link className="page__link" to="/playlists"><span className="icon"><RiPlayListFill /></span>Playlists</Link>
-                        <Link className="page__link" to="/chansons-aimees"><span className="icon"><BsHeartFill /></span>Chansons aimées</Link>
+                        <Link className="page__link page__link--active" to="/accueil"><span className="icon"><FiHome /></span><span className="page__link-text">Accueil</span></Link>
+                        <Link className="page__link" to="/playlists"><span className="icon"><RiPlayListFill /></span><span className="page__link-text">Playlists</span></Link>
+                        <Link className="page__link" to="/chansons-aimees"><span className="icon"><BsHeartFill /></span><span className="page__link-text">Chansons aimées</span></Link>
                     </nav>
             </div>
         )
@@ -32,9 +32,9 @@ function LeftSection () {
                             <span className="page__logo-text">Musiker</span>
                     </div>
                     <nav className="page__navigation">
-                        <Link className="page__link" to="/accueil"><span className="icon"><FiHome /></span>Accueil</Link>
-                        <Link className="page__link page__link--active" to="/playlists"><span className="icon"><RiPlayListFill /></span>Playlists</Link>
-                        <Link className="page__link" to="/chansons-aimées"><span className="icon"><BsHeartFill /></span>Chansons aimées</Link>
+                        <Link className="page__link" to="/accueil"><span className="icon"><FiHome /></span><span className="page__link-text">Accueil</span></Link>
+                        <Link className="page__link page__link--active" to="/playlists"><span className="icon"><RiPlayListFill /></span><span className="page__link-text">Playlists</span></Link>
+                        <Link className="page__link" to="/chansons-aimées"><span className="icon"><BsHeartFill /></span><span className="page__link-text">Chansons aimées</span></Link>
                     </nav>
             </div>
         ) 
