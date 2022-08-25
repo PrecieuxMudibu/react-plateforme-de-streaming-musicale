@@ -38,3 +38,25 @@
 .page__link--active {
     background: #053B52;
 }
+
+@media screen and (max-width: 700px) {
+    .left-section {
+        width: 10%;
+    }
+
+    .page__link-text {
+        display: none;
+    }
+    
+    .page__logo-text {
+        display: none;
+    }
+
+    .page__logo-img {
+        width: 5rem;
+    }
+
+    .page__logo-group {
+        margin-left: 10%;
+    }
+}

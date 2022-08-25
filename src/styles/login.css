@@ -40,7 +40,6 @@ width: 13.7rem;
 
 .login__second-title {
     font-size: 2.5rem;
-
 }
 
 .login__button {
@@ -57,4 +56,62 @@ width: 13.7rem;
     text-align: center;
     font-size: 1.9rem;
     width: 75%;
+}
+
+/* @media screen and (max-width: 1024px) {
+    .login__first-title {
+        margin-top: 10rem;
+        font-size: 6.5rem;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+    }
+} */
+
+@media screen and (max-width: 700px) {
+    .login {
+        /* background-image: url("../images/woman-dance.png"); */
+        /* background-repeat: no-repeat; */
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login__first-title {
+        margin-top: 10rem;
+        font-size: 6.5rem;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+    }
+    
+     .login__left-section {
+        display: none;
+     }
+     .login__right-section {
+        padding: auto 3rem;
+        /* border: 1px solid black; */
+     }
+
+     .login__second-title {
+        font-size: 2.5rem;
+    }
+
+    .login__button {
+        margin:2rem;
+        font-size: 2rem;
+        background: #053B52;
+        color:white;
+        font-weight: 600;
+        border-radius:.5rem;
+        text-decoration: none;
+        text-align: center; 
+        width: 110%;
+    }
+    .login__text {
+        text-align: center;
+        font-size: 1.9rem;
+        width: 180%;
+    }
 }
