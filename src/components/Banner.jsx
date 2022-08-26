@@ -3,7 +3,7 @@ import "../styles/banner.css"
 function Banner({ identifiant, image, bigTitle, name }) {
     return (
         <div key={identifiant} className="banner">
-            <div >
+            <div>
                 <img className="banner__image" src={image} alt="" />
             </div>
             <div>

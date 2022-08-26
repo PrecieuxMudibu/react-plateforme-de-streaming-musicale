@@ -7,10 +7,10 @@ function Profile() {
     const { token, setToken, userId, setUserId, name, setName } =
         useContext(applicationContext)
 
-        const logout = () => {
-            setToken("")
-            window.localStorage.removeItem("token")
-        }
+    const logout = () => {
+        setToken("")
+        window.localStorage.removeItem("token")
+    }
     // const [name, setName] = useState("")
     const [profileImage, setProfileImage] = useState()
 

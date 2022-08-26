@@ -15,18 +15,17 @@ header {
 
 .page__search-icon {
     font-size: 2.4rem;
-    border: 1px solid black;
 }
 
 .page__profile {
     background-color: #144D65;
     width:30%;
     border-radius: 3.3rem;
-    padding-left: 1rem;
+    padding: .2% 1% 0 1%;
     height: 4.4rem;
     position: relative;
-    margin-top: 1.5rem;
-    margin-right: 3rem;
+    margin-top: 1.5%;
+    margin-right: 3%;
     font-size: 1.9rem;
 }
 
@@ -41,9 +40,13 @@ header {
 .page__profile-text {
     font-size: 2rem;
     font-weight: bold;
-    position: absolute;
-    left: 6rem;
-    top: .5rem;
+    display: block;
+    margin-left: 15%;
+    padding: 2%;
+    overflow: hidden;
+    /* position: absolute;
+    left: 22%;
+    top: .4%; */
 }
 
 .page__profile-logo {
@@ -84,13 +87,26 @@ header {
 }
 
 @media screen and (max-width: 700px) {
-    .page__profile-text {
-        display: none; 
-    } 
+    header {
+        flex-direction: column-reverse;
+    }
+
+    .page__profile {
+        width:80%;       
+    }
+
+    .page__search {
+        width: 100%;
+        position: relative;     
+
+    }
+    .page__search-icon {
+        position: absolute;
+    }
 
     .page__input {
-        bottom: 30%;
-        left: 20%;
+        bottom: 50%;
+        left: 10%;
     }
     
     
