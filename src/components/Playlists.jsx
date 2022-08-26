@@ -9,8 +9,9 @@ import Login from "./Login"
 
 function Playlists() {
     const onTheSpotifyCount = new SpotifyWebApi()
-    const { token, userId, name,activeLink, updateActiveLink } = useContext(applicationContext)
-    updateActiveLink('playlists')
+    const { token, userId, name, activeLink, updateActiveLink } =
+        useContext(applicationContext)
+    updateActiveLink("playlists")
     const [playlists, setPlaylists] = useState([])
     useEffect(() => {
         onTheSpotifyCount.setAccessToken(token)
@@ -21,8 +22,8 @@ function Playlists() {
             }
         })
     }, [token])
-    if (token=='') {
-        return (<Login />)
+    if (token == "") {
+        return <Login />
     } else {
         return (
             <>
@@ -32,20 +33,20 @@ function Playlists() {
                         <Header />
                         <section>
                             <h1 className="page__first-title">Playlists</h1>
-                            <div className='card__container'>
-    
-                            {playlists.map((item) => (
-                                <Link
-                                    to={`/ecouter-une-playlist/${item.name}/${item.id}`}
-                                className='white-color'>
-                                    <Card 
-                                        identifiant={item.id}
-                                        image={item.images[0].url}
-                                        bigTitle={item.name}
-                                        name={`By ${name}`}
-                                    />
-                                </Link>
-                            ))}
+                            <div className="card__container">
+                                {playlists.map((item) => (
+                                    <Link
+                                        to={`/ecouter-une-playlist/${item.name}/${item.id}`}
+                                        className="white-color"
+                                    >
+                                        <Card
+                                            identifiant={item.id}
+                                            image={item.images[0].url}
+                                            bigTitle={item.name}
+                                            name={`By ${name}`}
+                                        />
+                                    </Link>
+                                ))}
                             </div>
                         </section>
                     </div>
@@ -53,7 +54,6 @@ function Playlists() {
             </>
         )
     }
-    
 }
 
 export default Playlists

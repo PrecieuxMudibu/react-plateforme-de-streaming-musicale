@@ -1,4 +1,4 @@
-function LikedSongs () {
+function LikedSongs() {
     return (
         <>
             <h1>Chansons aimées</h1>

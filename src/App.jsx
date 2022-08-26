@@ -16,7 +16,7 @@ function App() {
     const [token, setToken] = useState("")
     const [userId, setUserId] = useState("")
     const [name, setName] = useState("")
-    const [uriToPlay, setUriToPlay] = useState("")
+    const [uriToPlay, setUriToPlay] = useState([])
     const [activeLink, updateActiveLink] = useState("")
 
     return (
@@ -37,20 +37,17 @@ function App() {
                     updateActiveLink,
                 }}
             >
-                    <Routes>
-                        <Route path="/" element={<Login />} />
-                        <Route path="/accueil" element={<Home />} />
-                        <Route path="/rechercher" element={<Search />} />
-                        <Route path="/playlists" element={<Playlists />} />
-                        <Route
-                            path="/ecouter-une-playlist/:playlistName/:playlistId"
-                            element={<PlaylistSelected />}
-                        />
-                        <Route
-                            path="/chansons-aimees"
-                            element={<LikedSongs />}
-                        />
-                    </Routes>
+                <Routes>
+                    <Route path="/" element={<Login />} />
+                    <Route path="/accueil" element={<Home />} />
+                    <Route path="/rechercher" element={<Search />} />
+                    <Route path="/playlists" element={<Playlists />} />
+                    <Route
+                        path="/ecouter-une-playlist/:playlistName/:playlistId"
+                        element={<PlaylistSelected />}
+                    />
+                    <Route path="/chansons-aimees" element={<LikedSongs />} />
+                </Routes>
             </applicationContext.Provider>
         </>
     )
