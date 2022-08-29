@@ -48,7 +48,6 @@ function Home() {
         return <Login />
     } else {
         return (
-            <>
                 <div className="page">
                     <div className="page__top">
                         <LeftSection />
@@ -72,15 +71,11 @@ function Home() {
                                     ))}
                                 </div>
                             </section>
-                            {console.log(token)}
                         </div>
                     </div>
 
-                    <div className="page__bottom">
-                        <Spotifyplayer />
-                    </div>
+                    <Spotifyplayer />
                 </div>
-            </>
         )
     }
 }

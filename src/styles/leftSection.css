@@ -3,6 +3,7 @@
     width: 20%;
     height: 100vh;
 }
+
 .page__logo-group {
     font-size: 2.9rem;
     font-weight: bold;
@@ -65,14 +66,18 @@
 @media screen and (max-width: 450px) {
     .left-section {
         width: 100%;
-        border-top: 2px solid white;        
+        height: 100%;
     }
 
     .page__navigation {
+        border-top: 1px solid white;
         display: flex;
         justify-content: space-around;
     }
 
+    .page__link {
+        padding-left: 10%;
+    }
     .page__logo-group {
         display: none;
     }

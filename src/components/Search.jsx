@@ -64,9 +64,7 @@ function Search() {
                             </div>
                         </div>
                     </div>
-                    <div className="page__bottom">
-                        <Spotifyplayer />
-                    </div>
+                    <Spotifyplayer />
                 </div>
             </>
         )

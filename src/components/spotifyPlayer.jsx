@@ -12,26 +12,28 @@ function Spotifyplayer() {
     }, [uriToPlay])
 
     return (
-        <div className="page__spotify-player">
-            <SpotifyPlayer
-                autoPlay={true}
-                token={token}
-                uris={uriToPlay}
-                callback={(state) =>
-                    !state.isPlaying ? setPlay(false) : setPlay(true)
-                }
-                play={play}
-                styles={{
-                    activeColor: "#fff",
-                    bgColor: "#0e4A67",
-                    color: "#fff",
-                    loaderColor: "white",
-                    sliderColor: "white",
-                    sliderHandleColor: "#023853",
-                    trackArtistColor: "#DBDBDB",
-                    trackNameColor: "white",
-                }}
-            />
+        <div className="page__bottom">
+            <div className="page__spotify-player">
+                <SpotifyPlayer
+                    autoPlay={true}
+                    token={token}
+                    uris={uriToPlay}
+                    callback={(state) =>
+                        !state.isPlaying ? setPlay(false) : setPlay(true)
+                    }
+                    play={play}
+                    styles={{
+                        activeColor: "#fff",
+                        bgColor: "#0e4A67",
+                        color: "#fff",
+                        loaderColor: "white",
+                        sliderColor: "white",
+                        sliderHandleColor: "#023853",
+                        trackArtistColor: "#DBDBDB",
+                        trackNameColor: "white",
+                    }}
+                />
+            </div>
         </div>
     )
 }

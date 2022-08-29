@@ -83,4 +83,13 @@
         grid-template-columns: repeat(2, 50%);
         grid-gap: 1.5rem;
     }
+
+    .card__icone-group {    
+        height: 4rem;
+        width: 4rem;    
+    }
+
+    .card__icone-player {
+        font-size: 2.5rem;
+    }
 }

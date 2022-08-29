@@ -43,7 +43,6 @@ function PlaylistSelected() {
         return <Login />
     } else {
         return (
-            <>
                 <div className="page">
                     <div className="page__top">
                         <LeftSection />
@@ -79,9 +78,8 @@ function PlaylistSelected() {
                             </section>
                         </div>
                     </div>
-                </div>
                 <Spotifyplayer />
-            </>
+                </div>
         )
     }
 }
