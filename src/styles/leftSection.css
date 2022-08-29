@@ -58,5 +58,21 @@
 
     .page__logo-group {
         margin-left: 10%;
+    }    
+}
+
+@media screen and (max-width: 450px) {
+    .left-section {
+        width: 100%;
+        border-top: 2px solid white;
+    }
+
+    .page__navigation {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .page__logo-group {
+        display: none;
     }
 }

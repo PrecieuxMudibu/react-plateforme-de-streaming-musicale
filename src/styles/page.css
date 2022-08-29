@@ -34,3 +34,13 @@
         
     }
 }
+
+@media screen and (max-width: 450px) {
+    .page {
+        flex-direction: column-reverse;
+    }
+    .right-section {
+        width: 100%;
+    }
+}
+

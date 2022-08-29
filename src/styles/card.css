@@ -75,3 +75,11 @@
 
     }
 }
+
+@media screen and (max-width: 450px) {
+    .card__container {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-gap: 1.5rem;
+    }
+}
