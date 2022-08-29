@@ -39,11 +39,12 @@
 }
 
 @media screen and (max-width: 450px) {
-    .page {
-        background: red;
-    }
     .page__top {
         flex-direction: column-reverse;
+    }
+
+    .page__first-title {
+        margin: 5% 0;
     }
     
     .right-section {

@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1.5rem;
-    height: 60vh;
+    height: 59vh;
     overflow-y: scroll;
 }
 .card {
@@ -91,5 +91,10 @@
 
     .card__icone-player {
         font-size: 2.5rem;
+    }
+
+    .card__title {
+        width:100%;
+        overflow-x: scroll;
     }
 }
