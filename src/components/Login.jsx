@@ -2,12 +2,17 @@ import React from "react"
 import "../styles/login.css"
 import logo2 from "../images/logo2.png"
 function Login() {
-    const CLIENT_ID = "a62979cc04114573be6f1b1a78787db7"
-    // const REDIRECT_URI = "http://localhost:5173/accueil"
-    const REDIRECT_URI = "https://musiker.vercel.app/accueil"
-    // const REDIRECT_URI = "https://musiiker.netlify.app/accueil"
-    const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
-    const RESPONSE_TYPE = "token"
+    // const CLIENT_ID = "a62979cc04114573be6f1b1a78787db7"
+    // // const REDIRECT_URI = "http://localhost:5173/accueil"
+    // const REDIRECT_URI = "https://musiker.vercel.app/accueil"
+    // // const REDIRECT_URI = "https://musiiker.netlify.app/accueil"
+    // const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
+    // const RESPONSE_TYPE = "token"
+    let redirectUri = process.env.REACT_APP_REDIRECT_URI_DEV
+
+    if (process.env.NODE_ENV === 'production') {
+        redirectUri = process.env.REACT_APP_REDIRECT_URI_PROD
+    }
 
     return (
         <div className="login">
@@ -23,7 +28,7 @@ function Login() {
                 <h2 className="login__second-title">Connectez-vous !</h2>
                 <a
                     className="login__button"
-                    href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=user-modify-playback-state user-read-playback-state user-read-currently-playing user-follow-modify user-follow-read user-read-recently-played user-read-playback-position user-top-read playlist-read-collaborative playlist-modify-public playlist-read-private playlist-modify-private app-remote-control streaming user-read-email user-read-private user-library-modify user-library-read`}
+                    href={`${process.env.REACT_APP_AUTH_ENDPOINT}?client_id=${process.env.REACT_APP_CLIENT_ID}&redirect_uri=${redirectUri}&response_type=${process.env.REACT_APP_RESPONSE_TYPE}&scope=user-modify-playback-state user-read-playback-state user-read-currently-playing user-follow-modify user-follow-read user-read-recently-played user-read-playback-position user-top-read playlist-read-collaborative playlist-modify-public playlist-read-private playlist-modify-private app-remote-control streaming user-read-email user-read-private user-library-modify user-library-read`}
                 >
                     CONTINUEZ AVEC SPOTIFY
                 </a>
