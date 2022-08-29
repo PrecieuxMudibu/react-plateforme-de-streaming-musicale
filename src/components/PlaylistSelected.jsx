@@ -43,38 +43,43 @@ function PlaylistSelected() {
         return <Login />
     } else {
         return (
-            <>
                 <div className="page">
-                    <LeftSection />
-                    <div className="right-section">
-                        {console.log("Image", playlistTracks)}
-                        <Header />
-                        <section>
-                            <h1 className="page__first-title">Playlists</h1>
-                            <Banner
-                                image={imagePlaylist}
-                                bigTitle={playlistName}
-                                name={name}
-                            />
-                            <ListHead />
-
-                            {playlistTracks.map((item, index) => (
-                                <ListChildren
-                                    songNumber={index}
-                                    songName={item.track.name}
-                                    songImage={item.track.album.images[0].url}
-                                    songAlbum={item.track.album.name}
-                                    songDuration={findDuration(
-                                        item.track.duration_ms
-                                    )}
-                                    songUri={item.track.uri}
+                    <div className="page__top">
+                        <LeftSection />
+                        <div className="right-section">
+                            {console.log("Image", playlistTracks)}
+                            <Header />
+                            <section>
+                                <h1 className="page__first-title">Playlists</h1>
+                                <div className="page__playlist-selected-list">
+                                <Banner
+                                    image={imagePlaylist}
+                                    bigTitle={playlistName}
+                                    name={name}
                                 />
-                            ))}
-                        </section>
+                                <ListHead />
+
+                                
+                                    {playlistTracks.map((item, index) => (
+                                        <ListChildren
+                                            songNumber={index}
+                                            songName={item.track.name}
+                                            songImage={
+                                                item.track.album.images[0].url
+                                            }
+                                            songAlbum={item.track.album.name}
+                                            songDuration={findDuration(
+                                                item.track.duration_ms
+                                            )}
+                                            songUri={item.track.uri}
+                                        />
+                                    ))}
+                                    </div>
+                            </section>
+                        </div>
                     </div>
-                </div>
                 <Spotifyplayer />
-            </>
+                </div>
         )
     }
 }

@@ -37,29 +37,35 @@ function Search() {
         return (
             <>
                 <div className="page">
-                    <LeftSection />
-                    <div className="right-section">
-                        <Header />
+                    <div className="page__top">
+                        <LeftSection />
+                        <div className="right-section">
+                            <Header />
 
-                        <ListHead />
-                        {resultList !== []
-                            ? resultList.map((item, index) => (
-                                  <ListChildren
-                                      songId={item.id}
-                                      songNumber={index}
-                                      songImage={item.album.images[1].url}
-                                      songName={item.name}
-                                      songAlbum={item.album.name}
-                                      songDuration={findDuration(
-                                          item.duration_ms
-                                      )}
-                                      songUri={item.uri}
-                                  />
-                              ))
-                            : null}
+                            <ListHead />
+                            <div className="page__result-list">
+                                {resultList !== []
+                                    ? resultList.map((item, index) => (
+                                          <ListChildren
+                                              songId={item.id}
+                                              songNumber={index}
+                                              songImage={
+                                                  item.album.images[1].url
+                                              }
+                                              songName={item.name}
+                                              songAlbum={item.album.name}
+                                              songDuration={findDuration(
+                                                  item.duration_ms
+                                              )}
+                                              songUri={item.uri}
+                                          />
+                                      ))
+                                    : null}
+                            </div>
+                        </div>
                     </div>
+                    <Spotifyplayer />
                 </div>
-                <Spotifyplayer />
             </>
         )
     }

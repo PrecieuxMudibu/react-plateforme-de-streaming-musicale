@@ -28,27 +28,29 @@ function Playlists() {
         return (
             <>
                 <div className="page">
-                    <LeftSection />
-                    <div className="right-section">
-                        <Header />
-                        <section>
-                            <h1 className="page__first-title">Playlists</h1>
-                            <div className="card__container">
-                                {playlists.map((item) => (
-                                    <Link
-                                        to={`/ecouter-une-playlist/${item.name}/${item.id}`}
-                                        className="white-color"
-                                    >
-                                        <Card
-                                            identifiant={item.id}
-                                            image={item.images[0].url}
-                                            bigTitle={item.name}
-                                            name={`By ${name}`}
-                                        />
-                                    </Link>
-                                ))}
-                            </div>
-                        </section>
+                    <div className="page__top">
+                        <LeftSection />
+                        <div className="right-section">
+                            <Header />
+                            <section>
+                                <h1 className="page__first-title">Playlists</h1>
+                                <div className="card__container">
+                                    {playlists.map((item) => (
+                                        <Link
+                                            to={`/ecouter-une-playlist/${item.name}/${item.id}`}
+                                            className="white-color"
+                                        >
+                                            <Card
+                                                identifiant={item.id}
+                                                image={item.images[0].url}
+                                                bigTitle={item.name}
+                                                name={`By ${name}`}
+                                            />
+                                        </Link>
+                                    ))}
+                                </div>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </>
