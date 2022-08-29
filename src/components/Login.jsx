@@ -8,10 +8,11 @@ function Login() {
     // // const REDIRECT_URI = "https://musiiker.netlify.app/accueil"
     // const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
     // const RESPONSE_TYPE = "token"
-    let redirectUri = process.env.REACT_APP_REDIRECT_URI_DEV
 
-    if (process.env.NODE_ENV === 'production') {
-        redirectUri = process.env.REACT_APP_REDIRECT_URI_PROD
+    let redirectUri = import.meta.env["VITE_REDIRECT_URI_DEV"]
+
+    if (import.meta.env.mode === "production") {
+        redirectUri = import.meta.env["VITE_REDIRECT_URI_PROD"]
     }
 
     return (
@@ -28,7 +29,11 @@ function Login() {
                 <h2 className="login__second-title">Connectez-vous !</h2>
                 <a
                     className="login__button"
-                    href={`${process.env.REACT_APP_AUTH_ENDPOINT}?client_id=${process.env.REACT_APP_CLIENT_ID}&redirect_uri=${redirectUri}&response_type=${process.env.REACT_APP_RESPONSE_TYPE}&scope=user-modify-playback-state user-read-playback-state user-read-currently-playing user-follow-modify user-follow-read user-read-recently-played user-read-playback-position user-top-read playlist-read-collaborative playlist-modify-public playlist-read-private playlist-modify-private app-remote-control streaming user-read-email user-read-private user-library-modify user-library-read`}
+                    href={`${import.meta.env["VITE_AUTH_ENDPOINT"]}?client_id=${
+                        import.meta.env["VITE_CLIENT_ID"]
+                    }&redirect_uri=${redirectUri}&response_type=${
+                        import.meta.env["VITE_RESPONSE_TYPE"]
+                    }&scope=user-modify-playback-state user-read-playback-state user-read-currently-playing user-follow-modify user-follow-read user-read-recently-played user-read-playback-position user-top-read playlist-read-collaborative playlist-modify-public playlist-read-private playlist-modify-private app-remote-control streaming user-read-email user-read-private user-library-modify user-library-read`}
                 >
                     CONTINUEZ AVEC SPOTIFY
                 </a>
