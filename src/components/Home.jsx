@@ -50,29 +50,36 @@ function Home() {
         return (
             <>
                 <div className="page">
-                    <LeftSection />
-                    <div className="right-section">
-                        <Header />
-                        <section>
-                            <h1 className="page__first-title">
-                                Ecoutées récemment
-                            </h1>
-                            <div className="card__container">
-                                {recentlyPlayed.map((item) => (
-                                    <Card
-                                        identifiant={item.track.id}
-                                        image={item.track.album.images[0].url}
-                                        bigTitle={item.track.name}
-                                        name={item.track.artists[0].name}
-                                        uri={item.track.uri}
-                                    />
-                                ))}
-                            </div>
-                        </section>
-                        {console.log(token)}
+                    <div className="page__top">
+                        <LeftSection />
+                        <div className="right-section">
+                            <Header />
+                            <section>
+                                <h1 className="page__first-title">
+                                    Ecoutées récemment
+                                </h1>
+                                <div className="card__container">
+                                    {recentlyPlayed.map((item) => (
+                                        <Card
+                                            identifiant={item.track.id}
+                                            image={
+                                                item.track.album.images[0].url
+                                            }
+                                            bigTitle={item.track.name}
+                                            name={item.track.artists[0].name}
+                                            uri={item.track.uri}
+                                        />
+                                    ))}
+                                </div>
+                            </section>
+                            {console.log(token)}
+                        </div>
+                    </div>
+
+                    <div className="page__bottom">
+                        <Spotifyplayer />
                     </div>
                 </div>
-                <Spotifyplayer />
             </>
         )
     }

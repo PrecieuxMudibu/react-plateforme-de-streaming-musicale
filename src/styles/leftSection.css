@@ -1,6 +1,7 @@
 .left-section {
     background-color: #144D65;
     width: 20%;
+    height: 100vh;
 }
 .page__logo-group {
     font-size: 2.9rem;
@@ -64,7 +65,7 @@
 @media screen and (max-width: 450px) {
     .left-section {
         width: 100%;
-        border-top: 2px solid white;
+        border-top: 2px solid white;        
     }
 
     .page__navigation {

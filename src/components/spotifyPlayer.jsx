@@ -1,7 +1,7 @@
 import SpotifyPlayer from "react-spotify-web-playback"
 import { useContext, useEffect, useState } from "react"
 import { applicationContext } from "../App"
-import "../styles/page.css"
+import "../styles/spotifyPlayer.css"
 function Spotifyplayer() {
     const { token, setToken, uriToPlay, activeLink, updateActiveLink } =
         useContext(applicationContext)

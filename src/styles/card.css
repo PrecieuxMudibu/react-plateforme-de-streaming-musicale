@@ -2,7 +2,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1.5rem;
-
+    height: 60vh;
+    overflow-y: scroll;
 }
 .card {
     background-color: #144D65;
@@ -67,9 +68,9 @@
 
 
 @media screen and (max-width: 700px) {
-
     .card__container {
         display: grid;
+        /* border: 1px solid black; */
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 1.5rem;
 
