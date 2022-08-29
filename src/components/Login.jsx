@@ -11,7 +11,7 @@ function Login() {
 
     let redirectUri = import.meta.env["VITE_REDIRECT_URI_DEV"]
 
-    if (import.meta.env.mode === "production") {
+    if (import.meta.env.MODE === "production") {
         redirectUri = import.meta.env["VITE_REDIRECT_URI_PROD"]
     }
 
