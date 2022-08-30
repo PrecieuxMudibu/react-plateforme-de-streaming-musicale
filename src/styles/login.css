@@ -65,8 +65,11 @@ width: 13.7rem;
     }
 
     .login__second-title {
+        /* border: 1px solid red;
         width: 110%;
         text-align: center;
+        font-size: 2.5rem; */
+        display: none;
     }
 
     .login__first-title {
@@ -84,9 +87,7 @@ width: 13.7rem;
         padding: auto 3rem;
      }
 
-     .login__second-title {
-        font-size: 2.5rem;
-    }
+     
 
     .login__button {
         margin:2rem;
@@ -106,6 +107,3 @@ width: 13.7rem;
     }
 }
 
-/* @media screen and (max-width: 700px) {
-
-} */

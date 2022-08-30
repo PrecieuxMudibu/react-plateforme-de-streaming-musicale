@@ -37,12 +37,12 @@ function LeftSection() {
                         </span>
                         <span className="page__link-text">Playlists</span>
                     </Link>
-                    <Link className="page__link" to="/chansons-aimees">
+                    {/* <Link className="page__link" to="/chansons-aimees">
                         <span className="icon">
                             <BsHeartFill />
                         </span>
                         <span className="page__link-text">Chansons aimées</span>
-                    </Link>
+                    </Link> */}
                 </nav>
             </div>
         )
@@ -73,12 +73,12 @@ function LeftSection() {
                         </span>
                         <span className="page__link-text">Playlists</span>
                     </Link>
-                    <Link className="page__link" to="/chansons-aimées">
+                    {/* <Link className="page__link" to="/chansons-aimées">
                         <span className="icon">
                             <BsHeartFill />
                         </span>
                         <span className="page__link-text">Chansons aimées</span>
-                    </Link>
+                    </Link> */}
                 </nav>
             </div>
         )

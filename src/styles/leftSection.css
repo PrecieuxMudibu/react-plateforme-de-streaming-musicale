@@ -41,17 +41,13 @@
     background: #053B52;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
     .left-section {
-        width: 10%;
+        width: 25%;
     }
 
-    .page__link-text {
-        display: none;
-    }
-    
     .page__logo-text {
-        display: none;
+        bottom: 1rem;
     }
 
     .page__logo-img {
@@ -77,6 +73,10 @@
 
     .page__link {
         padding-left: 10%;
+    }
+
+    .page__link-text {
+        display: none;
     }
     .page__logo-group {
         display: none;
