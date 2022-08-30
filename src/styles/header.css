@@ -121,3 +121,22 @@ header {
         width: 80%;
     }
 }
+
+@media screen and (max-width: 320px) {
+    header {
+        width: 100%;
+    }
+
+    .page__input {
+        width: 90%;
+     }
+
+     .page__search {
+        width: 95%;
+        position: relative;     
+    }
+
+    .page__profile {
+        width:95%;       
+    }
+}

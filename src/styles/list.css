@@ -31,8 +31,6 @@
     width:48%;
     padding-right: 3%;
     padding-left: 2% ;
-
-
 }
 
 .page__list-third-column {
@@ -41,7 +39,6 @@
 
 .page__list-last-column {
     width:5%;
-
 }
 .flex {
     display: flex;
@@ -55,3 +52,14 @@
     margin-right: 3rem;
 }
 
+@media screen and (max-width: 450px) {
+
+    .page__imageMusic, .page__list-third-column {
+        display: none;       
+    }
+
+    .page__list-second-column {
+        width:68%;
+        padding-left: 8% ;
+    }
+}

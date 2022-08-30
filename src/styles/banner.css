@@ -22,3 +22,13 @@
     color:#DBDBDB;
     font-weight: 450;
 }
+
+@media screen and (max-width: 450px) {
+    .banner__image {
+        width: 10rem;
+    } 
+
+    .banner__title {
+        font-size: 4rem;
+    }
+}
