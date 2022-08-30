@@ -26,14 +26,6 @@ function PlaylistSelected() {
         onTheSpotifyCount.getPlaylistTracks(playlistId, function (err, data) {
             if (err) console.error(err)
             else {
-                // console.log (data)
-                // console.log ("Tableau",data.items)
-                // console.log ("Titre de la chanson de la playlists :",data.items[0].track.name)
-                // console.log ("Album de la chanson de la playlists :",data.items[0].track.album.name)
-                // console.log ("Durée d'une chanson de la playlists :",data.items[0].track.duration_ms)
-                // console.log ("Id d'une chanson de la playlists :",data.items[0].track.id)
-                // console.log ("URI d'une chanson de la playlists :",data.items[0].track.uri)
-                console.log("Image", data.items[0].track.album.images[0].url)
                 setPlaylistTracks(data.items)
                 setImagePlaylist(data.items[0].track.album.images[0].url)
             }
@@ -43,15 +35,14 @@ function PlaylistSelected() {
         return <Login />
     } else {
         return (
-                <div className="page">
-                    <div className="page__top">
-                        <LeftSection />
-                        <div className="right-section">
-                            {console.log("Image", playlistTracks)}
-                            <Header />
-                            <section>
-                                <h1 className="page__first-title">Playlists</h1>
-                                <div className="page__playlist-selected-list">
+            <div className="page">
+                <div className="page__top">
+                    <LeftSection />
+                    <div className="right-section">
+                        <Header />
+                        <section>
+                            <h1 className="page__first-title">Playlists</h1>
+                            <div className="page__playlist-selected-list">
                                 <Banner
                                     image={imagePlaylist}
                                     bigTitle={playlistName}
@@ -59,27 +50,26 @@ function PlaylistSelected() {
                                 />
                                 <ListHead />
 
-                                
-                                    {playlistTracks.map((item, index) => (
-                                        <ListChildren
-                                            songNumber={index}
-                                            songName={item.track.name}
-                                            songImage={
-                                                item.track.album.images[0].url
-                                            }
-                                            songAlbum={item.track.album.name}
-                                            songDuration={findDuration(
-                                                item.track.duration_ms
-                                            )}
-                                            songUri={item.track.uri}
-                                        />
-                                    ))}
-                                    </div>
-                            </section>
-                        </div>
+                                {playlistTracks.map((item, index) => (
+                                    <ListChildren
+                                        songNumber={index}
+                                        songName={item.track.name}
+                                        songImage={
+                                            item.track.album.images[0].url
+                                        }
+                                        songAlbum={item.track.album.name}
+                                        songDuration={findDuration(
+                                            item.track.duration_ms
+                                        )}
+                                        songUri={item.track.uri}
+                                    />
+                                ))}
+                            </div>
+                        </section>
                     </div>
-                <Spotifyplayer />
                 </div>
+                <Spotifyplayer />
+            </div>
         )
     }
 }
