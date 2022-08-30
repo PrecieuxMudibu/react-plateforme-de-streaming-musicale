@@ -39,6 +39,7 @@
 }
 
 @media screen and (max-width: 450px) {
+
     .page__top {
         flex-direction: column-reverse;
     }
