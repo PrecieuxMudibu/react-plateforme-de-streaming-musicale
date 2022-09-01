@@ -41,7 +41,9 @@ function Search() {
                         <LeftSection />
                         <div className="right-section">
                             <Header />
-
+                            <h1 className="page__first-title">
+                                    Résultat pour "{`${inputValue}`}"
+                                </h1>
                             <ListHead />
                             <div className="page__result-list">
                                 {resultList !== []

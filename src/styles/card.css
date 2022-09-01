@@ -1,7 +1,7 @@
 .card__container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1.5rem;
+    grid-template-columns: repeat(4, 24%);
+    grid-gap: 1%;
     height: 59vh;
     overflow-y: scroll;
 }

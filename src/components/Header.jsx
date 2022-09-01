@@ -5,10 +5,16 @@ import { useContext } from "react"
 import { applicationContext } from "../App"
 import SpotifyWebApi from "spotify-web-api-js"
 import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 function Header() {
     const { inputValue, updateInputValue } = useContext(applicationContext)
-
+    // const handleKeyPress = (e) => {
+    //     if (e.keyCode == 13) {
+    //         console.log("Entrée ", e.keyCode)
+    //         updateInputValue(e.target.value)
+    //     }
+    // }
     return (
         <header>
             <label className="page__search">
@@ -18,6 +24,7 @@ function Header() {
                 <Link to="/rechercher">
                     <input
                         onChange={(e) => updateInputValue(e.target.value)}
+                        // onKeyDown={handleKeyPress}
                         className="page__input"
                         type="text"
                         placeholder="Que voulez-vous écouter"
