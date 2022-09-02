@@ -1,0 +1,74 @@
+
+.dot-shuttle {
+    position: relative;
+    left: -15px;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 4rem;
+    background-color: black;
+    color: transparent;
+    margin: -1px 0;
+    filter: blur(2px);
+  }
+
+.loader__title {
+    position: absolute;
+    top: 60%;
+    font-size: 2.5rem;
+    color: rgb(218, 216, 216);
+    
+}
+  .snippet {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+  }
+ 
+
+.dot-overtaking {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: transparent;
+    color: white;
+    margin: -1px 0;
+    box-shadow: 0 -20px 0 0;
+    filter: blur(2px);
+    animation: dotOvertaking 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
+  }
+  
+  .dot-overtaking::before, .dot-overtaking::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: transparent;
+    color: white;
+    box-shadow: 0 -20px 0 0;
+    filter: blur(2px);
+  }
+  
+  .dot-overtaking::before {
+    animation: dotOvertaking 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
+    animation-delay: .3s;
+  }
+  
+  .dot-overtaking::after {
+    animation: dotOvertaking 1.5s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
+    animation-delay: .6s;
+  }
+  
+  @keyframes dotOvertaking {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }

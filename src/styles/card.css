@@ -80,9 +80,15 @@
 @media screen and (max-width: 450px) {
     .card__container {
         display: grid;
-        grid-template-columns: repeat(2, 50%);
-        grid-gap: 1.5rem;
-        height: 53vh;
+        grid-template-columns: repeat(2, 48%);
+        grid-gap: 3.5%;
+        height: 60vh;
+        padding-bottom: 6rem;
+    }
+
+    .card {
+        margin: 0;
+
     }
 
     .card__icone-group {    
@@ -99,3 +105,4 @@
         overflow-x: scroll;
     }
 }
+
