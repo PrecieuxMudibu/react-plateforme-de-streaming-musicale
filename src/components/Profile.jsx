@@ -41,7 +41,6 @@ function Profile() {
                     <RiLogoutBoxRFill />
                 </span>
             </p>
-            {/* <p className="page__progile-logout">Déconnexion</p> */}
         </div>
     )
 }

@@ -20,6 +20,8 @@ function Spotifyplayer() {
                     uris={uriToPlay}
                     callback={(state) =>
                         !state.isPlaying ? setPlay(false) : setPlay(true)
+                        // console.log(state)
+
                     }
                     play={play}
                     styles={{

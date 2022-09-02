@@ -5,11 +5,10 @@ import Login from "./components/Login"
 import Search from "./components/Search"
 import LikedSongs from "./components/LikedSongs"
 import Playlists from "./components/Playlists"
-import React, { createContext } from "react"
 import { useState } from "react"
 import PlaylistSelected from "./components/PlaylistSelected"
-
-const applicationContext = createContext()
+import {applicationContext} from "./context.js"
+// const applicationContext = createContext()
 
 function App() {
     const [inputValue, updateInputValue] = useState("")

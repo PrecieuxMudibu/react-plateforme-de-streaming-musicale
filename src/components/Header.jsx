@@ -3,9 +3,7 @@ import { BsSearch } from "react-icons/bs"
 import "../styles/header.css"
 import { useContext } from "react"
 import { applicationContext } from "../App"
-import SpotifyWebApi from "spotify-web-api-js"
 import { Link } from "react-router-dom"
-import { useNavigate } from "react-router-dom"
 
 function Header() {
     const { inputValue, updateInputValue } = useContext(applicationContext)

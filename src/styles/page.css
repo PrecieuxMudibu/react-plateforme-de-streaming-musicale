@@ -41,7 +41,7 @@
 @media screen and (max-width: 450px) {
 
     .page__top {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .page__first-title {
@@ -52,4 +52,3 @@
         width: 100%;
     }
 }
-
