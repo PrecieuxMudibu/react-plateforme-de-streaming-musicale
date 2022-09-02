@@ -83,7 +83,7 @@
         grid-template-columns: repeat(2, 48%);
         grid-gap: 3.5%;
         height: 60vh;
-        padding-bottom: 6rem;
+        padding-bottom: 3rem;
     }
 
     .card {
