@@ -11,7 +11,7 @@ This project is made with React and Vite.
 3. Create an environnement file.
 - Name it ".env.local"
 - Create your environnement variables like that :
-    VITE_CLIENT_ID = "a62979cc04114573be6f1b1a78787db7"
+    VITE_CLIENT_ID = "yourClientId"
     VITE_REDIRECT_URI_DEV = "http://localhost:5173/accueil"
     VITE_REDIRECT_URI_PROD = "https://musiker.vercel.app/accueil"
     VITE_AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
