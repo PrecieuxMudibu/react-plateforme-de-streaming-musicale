@@ -7,12 +7,12 @@ import { Link } from "react-router-dom"
 
 function Header() {
     const { inputValue, updateInputValue } = useContext(applicationContext)
-    // const handleKeyPress = (e) => {
-    //     if (e.keyCode == 13) {
-    //         console.log("Entrée ", e.keyCode)
-    //         updateInputValue(e.target.value)
-    //     }
-    // }
+    const handleKeyPress = (e) => {
+        if (e.keyCode == 13) {
+            console.log("Entrée ", e.keyCode)
+            updateInputValue(e.target.value)
+        }
+    }
     return (
         <header>
             <label className="page__search">
@@ -21,8 +21,8 @@ function Header() {
                 </span>
                 <Link to="/rechercher">
                     <input
-                        onChange={(e) => updateInputValue(e.target.value)}
-                        // onKeyDown={handleKeyPress}
+                        // onChange={(e) => updateInputValue(e.target.value)}
+                        onKeyDown={handleKeyPress}
                         className="page__input"
                         type="text"
                         placeholder="Que voulez-vous écouter"
