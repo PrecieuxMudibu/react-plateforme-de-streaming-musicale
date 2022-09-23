@@ -1,9 +1,10 @@
 import React from "react"
 import "../styles/login.css"
 import logo2 from "../images/logo2.png"
+import { useContext } from "react"
+import { applicationContext } from "../context"
 function Login() {
     let redirectUri = import.meta.env["VITE_REDIRECT_URI_DEV"]
-
     if (import.meta.env.MODE === "production") {
         redirectUri = import.meta.env["VITE_REDIRECT_URI_PROD"]
     }
@@ -35,7 +36,9 @@ function Login() {
                     qu'on apprend aux gens à avoir trop de respect pour la
                     musique ; on devrait plutôt leur apprendre à l'aimer.
                 </p>
+                
             </div>
+            
         </div>
     )
 }

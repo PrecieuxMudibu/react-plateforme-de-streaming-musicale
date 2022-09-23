@@ -17,6 +17,8 @@ function App() {
     const [name, setName] = useState("")
     const [uriToPlay, setUriToPlay] = useState([])
     const [activeLink, updateActiveLink] = useState("")
+    const [dataLoad, setDataLoad]=useState(false);
+
 
     return (
         <>
@@ -34,6 +36,8 @@ function App() {
                     setUriToPlay,
                     activeLink,
                     updateActiveLink,
+                    dataLoad,
+                    setDataLoad
                 }}
             >
                 <Routes>

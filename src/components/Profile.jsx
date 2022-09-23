@@ -1,32 +1,33 @@
-import { RiLogoutBoxRFill } from "react-icons/ri"
-import { useState, useEffect, useContext } from "react"
-import { applicationContext } from "../App"
-import SpotifyWebApi from "spotify-web-api-js"
+import { RiLogoutBoxRFill } from "react-icons/ri";
+import { useState, useEffect, useContext } from "react";
+import { applicationContext } from "../App";
+import SpotifyWebApi from "spotify-web-api-js";
 
 function Profile() {
-    const { token, setToken, userId, setUserId, name, setName } =
-        useContext(applicationContext)
+    const { token, setToken, userId, setUserId, name, setName,dataLoad, setDataLoad } =
+        useContext(applicationContext);
 
     const logout = () => {
-        setToken("")
-        window.localStorage.removeItem("token")
-    }
+        setToken("");
+        setDataLoad(false);
+        window.localStorage.removeItem("token");
+    };
     // const [name, setName] = useState("")
-    const [profileImage, setProfileImage] = useState()
+    const [profileImage, setProfileImage] = useState();
 
-    const onTheSpotifyCount = new SpotifyWebApi()
-    onTheSpotifyCount.setAccessToken(token)
+    const onTheSpotifyCount = new SpotifyWebApi();
+    onTheSpotifyCount.setAccessToken(token);
 
     useEffect(() => {
         onTheSpotifyCount.getMe(function (err, data) {
-            if (err) console.error("Erreur", err)
+            if (err) console.error("Erreur", err);
             else {
-                setName(data.display_name)
-                setProfileImage(data.images[0].url)
-                setUserId(data.id)
+                setName(data.display_name);
+                setProfileImage(data.images[0].url);
+                setUserId(data.id);
             }
-        })
-    }, [token])
+        });
+    }, [token]);
 
     return (
         <div className="page__profile">
@@ -42,7 +43,7 @@ function Profile() {
                 </span>
             </p>
         </div>
-    )
+    );
 }
 
-export default Profile
+export default Profile;
