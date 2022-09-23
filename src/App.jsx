@@ -1,5 +1,5 @@
 import "./App.css"
-import { Router, Route, Routes } from "react-router-dom"
+import { Router, Route, Routes, Navigate } from "react-router-dom"
 import Home from "./components/Home"
 import Login from "./components/Login"
 import Search from "./components/Search"
@@ -37,8 +37,10 @@ function App() {
                 }}
             >
                 <Routes>
+                    {/* <Route path="/" element={ token ? (<Login />) : (<Navigate to="/accueil" />) } /> */}
                     <Route path="/" element={<Login />} />
                     <Route path="/accueil" element={<Home />} />
+
                     <Route path="/rechercher" element={<Search />} />
                     <Route path="/playlists" element={<Playlists />} />
                     <Route
