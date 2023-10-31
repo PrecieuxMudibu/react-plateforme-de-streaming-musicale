@@ -11,7 +11,7 @@ import Login from "./Login";
 function Home() {
     let cardsLoaderTable = [];
 
-    for (let i=0; i<20; i++) {
+    for (let i = 0; i < 20; i++) {
         cardsLoaderTable.push(<CardLoader />);
     }
 
@@ -86,9 +86,7 @@ function Home() {
                                         />
                                     ))
                                 ) : (
-                                    <>
-                                        {cardsLoaderTable}
-                                    </>
+                                    <>{cardsLoaderTable}</>
                                 )}
                             </div>
                         </section>

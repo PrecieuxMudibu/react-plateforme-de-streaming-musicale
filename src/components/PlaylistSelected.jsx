@@ -1,7 +1,6 @@
 import LeftSection from "./LeftSection"
 import Header from "./Header"
 import Banner from "./Banner"
-import ironMan from "../images/iron-man.jpg"
 import ListHead from "./ListHead"
 import ListChildren from "./ListChildren"
 import { useContext, useEffect, useState } from "react"

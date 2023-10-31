@@ -1,24 +1,23 @@
-import "./App.css"
-import { Router, Route, Routes, Navigate } from "react-router-dom"
-import Home from "./components/Home"
-import Login from "./components/Login"
-import Search from "./components/Search"
-import LikedSongs from "./components/LikedSongs"
-import Playlists from "./components/Playlists"
-import { useState } from "react"
-import PlaylistSelected from "./components/PlaylistSelected"
-import {applicationContext} from "./context.js"
+import "./App.css";
+import { Router, Route, Routes, Navigate } from "react-router-dom";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import Search from "./components/Search";
+import LikedSongs from "./components/LikedSongs";
+import Playlists from "./components/Playlists";
+import { useState } from "react";
+import PlaylistSelected from "./components/PlaylistSelected";
+import { applicationContext } from "./context.js";
 // const applicationContext = createContext()
 
 function App() {
-    const [inputValue, updateInputValue] = useState("")
-    const [token, setToken] = useState("")
-    const [userId, setUserId] = useState("")
-    const [name, setName] = useState("")
-    const [uriToPlay, setUriToPlay] = useState([])
-    const [activeLink, updateActiveLink] = useState("")
-    const [dataLoad, setDataLoad]=useState(false);
-
+    const [inputValue, updateInputValue] = useState("");
+    const [token, setToken] = useState("");
+    const [userId, setUserId] = useState("");
+    const [name, setName] = useState("");
+    const [uriToPlay, setUriToPlay] = useState([]);
+    const [activeLink, updateActiveLink] = useState("");
+    const [dataLoad, setDataLoad] = useState(false);
 
     return (
         <>
@@ -37,7 +36,7 @@ function App() {
                     activeLink,
                     updateActiveLink,
                     dataLoad,
-                    setDataLoad
+                    setDataLoad,
                 }}
             >
                 <Routes>
@@ -55,8 +54,8 @@ function App() {
                 </Routes>
             </applicationContext.Provider>
         </>
-    )
+    );
 }
 
-export default App
-export { applicationContext }
+export default App;
+export { applicationContext };
